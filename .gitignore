@@ -1,0 +1,5 @@
+.env
+google_credentials.json
+my-creds.json
+.DS_Store
+._.DS_Store
