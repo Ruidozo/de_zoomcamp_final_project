@@ -1,4 +1,5 @@
 import io
+import os
 import pandas as pd
 import geopandas as gpd
 import requests
@@ -21,16 +22,22 @@ def load_data_from_api(*args, **kwargs):
     if response.status_code != 200:
         raise Exception(f"Failed to fetch data: {response.status_code}, {response.text}")
 
+    # Read the response data into a Pandas DataFrame
     df = pd.read_csv(io.StringIO(response.text), sep=';')
 
+    # Parse the 'Geo Shape' column into geometry
     df['geometry'] = df['Geo Shape'].apply(lambda x: shape(eval(x)) if pd.notnull(x) else None)
+
+    # Convert to GeoPandas DataFrame
     gdf = gpd.GeoDataFrame(df, geometry='geometry')
 
+    # Rename relevant columns for clarity
     gdf = gdf.rename(columns={
         'Official Name District': 'District Name',
         'Geo Point': 'Geo Coordinates'
     })
 
+    # Select only necessary columns
     gdf = gdf[['District Name', 'Geo Coordinates', 'geometry']]
 
     # Debugging outputs
@@ -38,8 +45,16 @@ def load_data_from_api(*args, **kwargs):
     print(f"GeoDataFrame columns: {gdf.columns}")
     print(f"GeoDataFrame preview:\n{gdf.head()}")
 
-    # Salve temporariamente para inspecionar
-    gdf.to_file("/tmp/district_data.geojson", driver="GeoJSON")
+    # Ensure the output directory exists
+    output_dir = "/tmp"
+    if not os.path.exists(output_dir):
+        print(f"Creating directory: {output_dir}")
+        os.makedirs(output_dir)
+
+    # Save the GeoDataFrame as a GeoJSON file
+    output_file_path = os.path.join(output_dir, "district_data.geojson")
+    gdf.to_file(output_file_path, driver="GeoJSON")
+    print(f"GeoDataFrame saved to {output_file_path}")
 
     return gdf
 

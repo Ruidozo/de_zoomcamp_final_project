@@ -1,0 +1,165 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_path: data_loaders/kaggle_loader.py
+    file_source:
+      path: data_loaders/kaggle_loader.py
+  downstream_blocks:
+  - cleans_dataframe
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: kaggle_loader
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: kaggle_loader
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - remove_null_price
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: cleans dataframe
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - kaggle_loader
+  uuid: cleans_dataframe
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - data_exporter_weely_postgres
+  - tablecomparison
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: drops_duplicate_rows
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - remove_null_price
+  uuid: drops_duplicate_rows
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_path: data_exporters/data_exporter_weely_postgres.py
+    file_source:
+      path: data_exporters/data_exporter_weely_postgres.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_exporter_weely_postgres
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - drops_duplicate_rows
+  uuid: data_exporter_weely_postgres
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - tablecomparison
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: loads_real_estate_table
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: loads_real_estate_table
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - export_real_estate_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: tablecomparison
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - drops_duplicate_rows
+  - loads_real_estate_table
+  uuid: tablecomparison
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: export_real_estate_data
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - tablecomparison
+  uuid: export_real_estate_data
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - drops_duplicate_rows
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove null price
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - cleans_dataframe
+  uuid: remove_null_price
+cache_block_output_in_memory: false
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2025-01-16 07:53:09.712262+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: real_estate
+notification_config: {}
+remote_variables_dir: null
+retry_config: {}
+run_pipeline_in_one_process: false
+settings:
+  triggers: null
+spark_config: {}
+tags: []
+type: python
+uuid: real_estate
+variables_dir: /home/src/mage_data/de-zoomcamp-project
+widgets: []
