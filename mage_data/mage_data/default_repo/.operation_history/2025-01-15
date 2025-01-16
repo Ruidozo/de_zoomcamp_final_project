@@ -1,0 +1,2 @@
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "api_test_call_idealista"}, "timestamp": 1736935443, "user": null}
+{"operation": "create", "resource": {"type": "pipeline", "uuid": "de_zoomcamp_project_pipeline"}, "timestamp": 1736936375, "user": null}
