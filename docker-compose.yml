@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+  mage:
+    build: .
+    ports:
+      - "6789:6789"
+    volumes:
+      - ./mage_data:/home/src
+      - ./secrets:/home/src/secrets
+      - ./.env:/home/src/.env
+    environment:
+      - MAGE_HOME=/home/src
+    command: ["mage", "start", "de-zoomcamp-project"]
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: zoomcamp
+      POSTGRES_DB: mage_db
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:
