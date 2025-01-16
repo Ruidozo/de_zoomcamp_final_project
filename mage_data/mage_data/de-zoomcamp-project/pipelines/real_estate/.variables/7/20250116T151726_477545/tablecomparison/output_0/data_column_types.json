@@ -1,0 +1,1 @@
+{"price": "float64", "gross_area": "float64", "total_area": "float64", "parking": "float64", "construction_year": "float64", "total_rooms": "float64", "number_of_bedrooms": "float64", "number_of_w_c": "float64", "living_area": "float64", "lot_size": "float64", "built_area": "float64", "number_of_bathrooms": "float64"}
