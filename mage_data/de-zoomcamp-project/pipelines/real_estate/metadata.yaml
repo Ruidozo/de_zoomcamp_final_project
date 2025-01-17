@@ -94,6 +94,7 @@ blocks:
   configuration: {}
   downstream_blocks:
   - tablecomparison
+  - data_evaluator
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -139,6 +140,43 @@ blocks:
   upstream_blocks:
   - tablecomparison
   uuid: export_real_estate_data
+- all_upstream_blocks_executed: true
+  color: teal
+  configuration:
+    file_source:
+      path: custom/data_evaluator.py
+  downstream_blocks:
+  - data_exporter_stats
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_evaluator
+  retry_config: null
+  status: updated
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - loads_real_estate_table
+  uuid: data_evaluator
+- all_upstream_blocks_executed: true
+  color: null
+  configuration:
+    file_source:
+      path: data_exporters/data_exporter_stats.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_exporter_stats
+  retry_config: null
+  status: executed
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - data_evaluator
+  uuid: data_exporter_stats
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

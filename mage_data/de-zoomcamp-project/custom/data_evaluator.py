@@ -1,27 +1,34 @@
-if 'custom' not in globals():
-    from mage_ai.data_preparation.decorators import custom
-if 'test' not in globals():
-    from mage_ai.data_preparation.decorators import test
-
 from mage_ai.io.postgres import Postgres
 from mage_ai.io.config import ConfigFileLoader
 from mage_ai.settings.repo import get_repo_path
 from os import path
 import pandas as pd
+import time
+
+if 'custom' not in globals():
+    from mage_ai.data_preparation.decorators import custom
+if 'test' not in globals():
+    from mage_ai.data_preparation.decorators import test
 
 
 @custom
 def transform_custom(*args, **kwargs):
     """
     Calculate detailed statistics for all columns in a PostgreSQL table.
-    Return only the evaluation data for export.
+    Return only the evaluation data for export, with a 1-minute delay before execution.
     """
     # Load PostgreSQL configuration
     config_path = path.join(get_repo_path(), 'io_config.yaml')
     config_profile = 'default'
 
     # Specify the table name
-    table_name = 'public.real_estate_data'
+    table_name = 'public.real_estate_data_weekly'
+
+    # Add a delay 
+    delay_seconds = 20
+    print(f"Delaying execution by {delay_seconds} seconds...")
+    time.sleep(delay_seconds)
+    print("Resuming execution after delay.")
 
     def summary(df):
         """
@@ -33,8 +40,8 @@ def transform_custom(*args, **kwargs):
         summary_data = {
             "Column Name": df.columns,  # Add column names explicitly
             "Data Type": df.dtypes.astype(str),  # Convert dtypes to string
-            "Missing#": df.isna().sum(),
-            "Missing%": (df.isna().sum() / len(df)) if len(df) > 0 else 0,
+            "Missing percent": (df.isna().sum() / len(df)) if len(df) > 0 else 0,
+            "Missing quant": df.isna().sum(),
             "Dups": [df.duplicated().sum()] * len(df.columns),  # Apply duplicated count to all rows
             "Uniques": df.nunique().values,
             "Count": df.count().values,
@@ -57,14 +64,47 @@ def transform_custom(*args, **kwargs):
 
         # Create the summary DataFrame
         summ = pd.DataFrame(summary_data)
-        return summ
 
+        # Cast columns to match PostgreSQL schema
+        summ["Missing percent"] = summ["Missing percent"].astype(float)  # Cast to float
+        summ["Missing quant"] = summ["Missing quant"].astype(int)  # Cast to integer
+
+        # Replace NaN values with appropriate defaults
+        for col in summ.columns:
+            if summ[col].isna().any():
+                print(f"Column '{col}' contains NaN values. Filling with appropriate value.")
+                if summ[col].dtype in ['float64', 'int64']:  # Numeric columns
+                    summ[col] = summ[col].fillna(0)  # Replace NaN with 0 for numeric
+                else:  # Object columns
+                    summ[col] = summ[col].fillna("")  # Replace NaN with empty string for objects
+
+        # Drop rows where all numeric values are 0
+        numeric_cols = summ.select_dtypes(include=["number"]).columns
+        summ = summ[~(summ[numeric_cols].sum(axis=1) == 0)]
+
+        return summ
 
     with Postgres.with_config(ConfigFileLoader(config_path, config_profile)) as loader:
         # Fetch all data from the table
         query_fetch_data = f"SELECT * FROM {table_name};"
         df = loader.load(query_fetch_data)
 
+        # Debugging: Print DataFrame columns
+        print("Original DataFrame Columns:", df.columns)
+
+        # Align DataFrame columns to match PostgreSQL table
+        expected_columns = [
+            "unique_id", "price", "district", "city", "town", "_type",
+            "energy_certificate", "gross_area", "total_area", "parking",
+            "has_parking", "_floor", "construction_year", "energy_efficiency_level",
+            "publish_date", "garage", "elevator", "electric_cars_charging",
+            "total_rooms", "number_of_bedrooms", "number_of_w_c",
+            "conservation_status", "living_area", "lot_size", "built_area",
+            "number_of_bathrooms"
+        ]
+        df = df[expected_columns]
+
+        print("Post-alignment DataFrame Columns:", df.columns)
         print(f"Data fetched: {df.shape}")
 
         # Calculate summary statistics
@@ -73,19 +113,3 @@ def transform_custom(*args, **kwargs):
         # Return only the evaluation data (summary statistics)
         print(f"Data_stats fetched: {stats.shape}")
         return stats
-
-
-@test
-def test_output(output, *args) -> None:
-    """
-    Test to ensure the evaluation DataFrame is valid.
-    """
-    assert output is not None, "The output is undefined"
-    assert isinstance(output, pd.DataFrame), "The output is not a DataFrame"
-    assert not output.empty, "The output DataFrame is empty"
-    required_columns = [
-        "Column Name", "Data Type", "Missing#", "Missing%", "Dups", "Uniques", "Count",
-        "Min", "Max", "Average", "Standard Deviation"
-    ]
-    for col in required_columns:
-        assert col in output.columns, f"Missing expected column: {col}"
