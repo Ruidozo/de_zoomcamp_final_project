@@ -13,12 +13,12 @@ blocks:
   language: python
   name: kaggle_loader
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: kaggle_loader
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -35,7 +35,7 @@ blocks:
   upstream_blocks:
   - kaggle_loader
   uuid: cleans_dataframe
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -53,7 +53,7 @@ blocks:
   upstream_blocks:
   - remove_null_price
   uuid: drops_duplicate_rows
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     file_path: data_exporters/data_exporter_weely_postgres.py
@@ -83,7 +83,7 @@ blocks:
   language: python
   name: loads_real_estate_table
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: data_loader
   upstream_blocks: []
@@ -122,7 +122,7 @@ blocks:
   upstream_blocks:
   - tablecomparison
   uuid: export_real_estate_data
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
