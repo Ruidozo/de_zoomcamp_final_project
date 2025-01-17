@@ -32,7 +32,7 @@ def export_data_to_postgres(df: DataFrame, **kwargs) -> None:
 
     # Set schema and table name
     schema_name = 'public'  # Default PostgreSQL schema
-    table_name = 'real_estate_data'
+    table_name = 'stats'
 
     # Load PostgreSQL configuration
     config_path = path.join(get_repo_path(), 'io_config.yaml')
