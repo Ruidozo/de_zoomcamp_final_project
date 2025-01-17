@@ -8,3 +8,6 @@ my-creds.json
 ._.DS_Store
 >>>>>>> 4e6bc88 (Initial commit)
 mage_data/de-zoomcamp-project/metadata.yaml
+# ...existing code...
+metadata.yaml
+# ...existing code...
