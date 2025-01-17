@@ -1,0 +1,10 @@
+config:
+  database: mage_db
+  host: 34.38.241.111
+  password: zoomcamp
+  port: 5432
+  schema: public
+  username: postgres
+  replication_slot: null
+  publication_name: null
+source: postgresql
