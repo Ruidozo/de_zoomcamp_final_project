@@ -3,12 +3,21 @@ if 'custom' not in globals():
 if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
 import requests
+import os
+from dotenv import load_dotenv  # Import load_dotenv
+
+# Load .env file
+load_dotenv()
+
+# Access the Slack token
+slack_token = os.getenv('SLACK_TRIGGER_TOKEN')
+
 
 def notify_slack(pipeline_name, status, db_data=None):
     """
     Sends a notification to Slack with the pipeline status and the number of rows exported.
     """
-    webhook_url = "https://hooks.slack.com/services/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"
+    webhook_url = "https://hooks.slack.com/services/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"
 
     # Prepare the message
     if db_data and isinstance(db_data, int):
@@ -47,10 +56,6 @@ def transform_custom(*args, **kwargs):
     )
 
     return num_rows_exported
-
-
-
-
 
 
 @test

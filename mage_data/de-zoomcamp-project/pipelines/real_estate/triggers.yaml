@@ -10,5 +10,5 @@ triggers:
   sla: null
   start_time: 2025-01-12 05:00:00
   status: inactive
-  token: 91bff1f268174bf39ebc0cf38ee02ca3
+  token: "${SLACK_TRIGGER_TOKEN}"
   variables: {}
