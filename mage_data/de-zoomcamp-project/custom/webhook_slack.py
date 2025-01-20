@@ -4,20 +4,20 @@ if 'test' not in globals():
     from mage_ai.data_preparation.decorators import test
 import requests
 import os
-from dotenv import load_dotenv  # Import load_dotenv
+from dotenv import load_dotenv
 
 # Load .env file
 load_dotenv()
-
-# Access the Slack token
-slack_token = os.getenv('SLACK_TRIGGER_TOKEN')
-
 
 def notify_slack(pipeline_name, status, db_data=None):
     """
     Sends a notification to Slack with the pipeline status and the number of rows exported.
     """
-    webhook_url = "https://hooks.slack.com/services/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"
+    # Access the webhook URL from environment variables
+    webhook_url = os.getenv('SLACK_WEBHOOK_URL')
+
+    if not webhook_url:
+        raise ValueError("Slack webhook URL is not set in the environment variables.")
 
     # Prepare the message
     if db_data and isinstance(db_data, int):
@@ -31,7 +31,11 @@ def notify_slack(pipeline_name, status, db_data=None):
     message = {"text": message_text}
 
     # Send the Slack message
-    requests.post(webhook_url, json=message)
+    response = requests.post(webhook_url, json=message)
+
+    # Debug: Print the response
+    print(f"Response status code: {response.status_code}")
+    print(f"Response text: {response.text}")
 
 
 @custom
