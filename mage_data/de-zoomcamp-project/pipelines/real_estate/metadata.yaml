@@ -29,13 +29,30 @@ blocks:
   language: python
   name: cleans dataframe
   retry_config: null
-  status: executed
+  status: failed
   timeout: null
   type: transformer
   upstream_blocks:
   - kaggle_loader
   uuid: cleans_dataframe
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - drops_duplicate_rows
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: remove null price
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - cleans_dataframe
+  uuid: remove_null_price
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -53,7 +70,7 @@ blocks:
   upstream_blocks:
   - remove_null_price
   uuid: drops_duplicate_rows
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration:
     file_path: data_exporters/data_exporter_weely_postgres.py
@@ -66,29 +83,12 @@ blocks:
   language: python
   name: data_exporter_weely_postgres
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_exporter
   upstream_blocks:
   - drops_duplicate_rows
   uuid: data_exporter_weely_postgres
-- all_upstream_blocks_executed: true
-  color: null
-  configuration: {}
-  downstream_blocks:
-  - drops_duplicate_rows
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: python
-  name: remove null price
-  retry_config: null
-  status: executed
-  timeout: null
-  type: transformer
-  upstream_blocks:
-  - cleans_dataframe
-  uuid: remove_null_price
 - all_upstream_blocks_executed: true
   color: null
   configuration: {}
@@ -106,7 +106,7 @@ blocks:
   type: data_loader
   upstream_blocks: []
   uuid: loads_real_estate_table
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
   downstream_blocks:
@@ -124,10 +124,11 @@ blocks:
   - drops_duplicate_rows
   - loads_real_estate_table
   uuid: tablecomparison
-- all_upstream_blocks_executed: true
+- all_upstream_blocks_executed: false
   color: null
   configuration: {}
-  downstream_blocks: []
+  downstream_blocks:
+  - webhook_slack
   executor_config: null
   executor_type: local_python
   has_callback: false
@@ -153,7 +154,7 @@ blocks:
   language: python
   name: data_evaluator
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: custom
   upstream_blocks:
@@ -177,6 +178,25 @@ blocks:
   upstream_blocks:
   - data_evaluator
   uuid: data_exporter_stats
+- all_upstream_blocks_executed: false
+  color: pink
+  configuration:
+    file_path: custom/webhook_slack.py
+    file_source:
+      path: custom/webhook_slack.py
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: webhook slack
+  retry_config: null
+  status: executed
+  timeout: null
+  type: custom
+  upstream_blocks:
+  - export_real_estate_data
+  uuid: webhook_slack
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}

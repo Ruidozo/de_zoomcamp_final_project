@@ -16,7 +16,7 @@ services:
   mageai:
     build:
       context: .
-      dockerfile: Dockerfile  # Ensure this path is correct
+      dockerfile: dockerfile  # Ensure this path is correct
     ports:
       - "6789:6789"
     volumes:
