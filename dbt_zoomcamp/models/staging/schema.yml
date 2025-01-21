@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: real_estate_data
+    description: "A starter dbt model"
+
+  - name: real_estate_data_weekly
