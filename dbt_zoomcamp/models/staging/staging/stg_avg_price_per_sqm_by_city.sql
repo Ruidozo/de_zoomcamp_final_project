@@ -17,4 +17,3 @@ select
 from base
 group by city, district
 order by avg_price_per_sqm desc
-limit 500;
