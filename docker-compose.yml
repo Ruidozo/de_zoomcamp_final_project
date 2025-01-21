@@ -35,10 +35,13 @@ services:
       dockerfile: dockerfile  # Ensure this path is correct
     container_name: dbt
     volumes:
-      - ./dbt:/usr/app/dbt
+      - ./dbt_zoomcamp:/usr/app/dbt
+      - ./dbt_zoomcamp/dbt_cloud.yml:/root/.dbt/dbt_cloud.yml
+    working_dir: /usr/app/dbt
     environment:
       - DBT_PROFILES_DIR=/usr/app/dbt/profiles
     command: ["dbt", "run"]
+
 
 volumes:
   pg_data:
