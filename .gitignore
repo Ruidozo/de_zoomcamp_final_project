@@ -4,3 +4,4 @@ my-creds.json
 .DS_Store
 ._.DS_Store
 mage_data/de-zoomcamp-project/metadata.yaml
+/dbt_zoomcamp/dbt_cloud.yml
