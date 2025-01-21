@@ -7,4 +7,5 @@ sources:
 
     tables:
       - name: real_estate_data
+      - name: stats
       - name: real_estate_data_weekly
