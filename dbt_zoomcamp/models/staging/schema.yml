@@ -1,7 +1,10 @@
 version: 2
 
-models:
-  - name: real_estate_data
-    description: "A starter dbt model"
+sources:
+  - name: staging
+    database: "mage_db"
+    schema: "public"
 
-  - name: real_estate_data_weekly
+    tables:
+      - name: real_estate_data
+      - name: real_estate_data_weekly
