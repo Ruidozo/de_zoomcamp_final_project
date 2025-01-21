@@ -9,3 +9,4 @@ sources:
       - name: real_estate_data
       - name: stats
       - name: real_estate_data_weekly
+      - name: avg_price_per_sqm_by_city
