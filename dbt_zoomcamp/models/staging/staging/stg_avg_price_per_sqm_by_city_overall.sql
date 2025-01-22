@@ -15,4 +15,4 @@ select
   avg(price_per_sqm) as avg_price_per_sqm
 from base
 group by city, district
-order by avg_price_per_sqm desc;
+order by avg_price_per_sqm desc
