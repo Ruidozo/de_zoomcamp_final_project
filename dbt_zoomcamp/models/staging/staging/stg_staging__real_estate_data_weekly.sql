@@ -34,7 +34,8 @@ renamed as (
         living_area,
         lot_size,
         built_area,
-        number_of_bathrooms
+        number_of_bathrooms,
+        push_date
 
     from source
 

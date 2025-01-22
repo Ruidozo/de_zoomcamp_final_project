@@ -4,9 +4,9 @@ sources:
   - name: staging
     database: "mage_db"
     schema: "public"
-
+    
     tables:
-      - name: real_estate_data
-      - name: stats
-      - name: real_estate_data_weekly
-      - name: stg_avg_price_per_city_residential
+    - name: real_estate_data
+    - name: stats
+    - name: real_estate_data_weekly
+    - name: stg_avg_price_per_city_residential

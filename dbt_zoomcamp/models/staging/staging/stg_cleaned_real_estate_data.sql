@@ -1,10 +1,9 @@
-with 
-  base as (
-      select *
-      from {{ ref('stg_staging__real_estate_data') }}
-  )
-select *
-from base
-where total_area > 10
-  and price > 100
-  and price / nullif(total_area, 0) between 100 and 50000
+WITH base AS (
+    SELECT *
+    FROM {{ ref('stg_staging__real_estate_data') }}
+)
+SELECT *
+FROM base
+WHERE total_area > 10
+  AND price > 100
+  AND price / NULLIF(total_area, 0) BETWEEN 100 AND 50000
