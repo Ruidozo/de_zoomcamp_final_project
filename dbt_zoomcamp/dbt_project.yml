@@ -34,3 +34,9 @@ models:
   dbt_zoomcamp:
     staging:
       materialized: view
+
+seeds:
+  dbt_zoomcamp:
+    pt:
+      +schema: public  # Or any schema where you want the seed table
+
