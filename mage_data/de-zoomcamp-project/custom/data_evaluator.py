@@ -25,7 +25,7 @@ def transform_custom(*args, **kwargs):
     table_name = 'public.real_estate_data_weekly'
 
     # Add a delay 
-    delay_seconds = 10
+    delay_seconds = 30
     print(f"Delaying execution by {delay_seconds} seconds...")
     time.sleep(delay_seconds)
     print("Resuming execution after delay.")

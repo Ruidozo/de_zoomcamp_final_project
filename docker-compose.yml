@@ -29,19 +29,5 @@ services:
       - MAGE_PROJECT=de-zoomcamp-project
     command: ["mage", "start", "de-zoomcamp-project"]
 
-  dbt:
-    build:
-      context: .
-      dockerfile: dockerfile  # Ensure this path is correct
-    container_name: dbt
-    volumes:
-      - ./dbt_zoomcamp:/usr/app/dbt
-      - ./dbt_zoomcamp/dbt_cloud.yml:/root/.dbt/dbt_cloud.yml
-    working_dir: /usr/app/dbt
-    environment:
-      - DBT_PROFILES_DIR=/usr/app/dbt/profiles
-    command: ["dbt", "run"]
-
-
 volumes:
   pg_data:
