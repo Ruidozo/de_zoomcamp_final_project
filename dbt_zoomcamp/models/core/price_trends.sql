@@ -25,3 +25,5 @@ SELECT
     TO_CHAR(total_entries, 'FM999,999,999') AS total_entries -- Apply thousands separator
 FROM date_trends
 ORDER BY year, month
+
+
