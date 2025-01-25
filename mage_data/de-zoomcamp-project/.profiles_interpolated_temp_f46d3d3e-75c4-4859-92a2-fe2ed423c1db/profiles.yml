@@ -1,0 +1,11 @@
+dbt_zoomcamp:
+  outputs:
+    dev:
+      dbname: mage_db
+      host: postgres
+      password: zoomcamp
+      port: 5432
+      schema: public
+      type: postgres
+      user: postgres
+  target: dev

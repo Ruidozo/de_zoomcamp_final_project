@@ -1,7 +1,8 @@
 with 
 
 source as (
-    select * from "mage_db"."public"."real_estate_data"
+    select * 
+    from "mage_db"."public"."real_estate_data"
 ),
 
 renamed as (
@@ -9,8 +10,8 @@ renamed as (
         unique_id,
         price,
         district,
-        city,  -- Ensure this matches the CSV column
-        town,  -- Matches the real estate data table
+        city,
+        town,
         _type,
         energy_certificate,
         gross_area,
@@ -34,16 +35,7 @@ renamed as (
         number_of_bathrooms,
         push_date
     from source
-),
-
-joined as (
-    select 
-        renamed.*,
-        towns.latitude,
-        towns.longitude
-    from renamed
-    left join "mage_db"."public_public"."pt" towns
-    on renamed.city = towns.city -- Update this to match your CSV structure
 )
 
-select * from joined
+select * 
+from renamed

@@ -6,13 +6,11 @@
     with 
 
 source as (
-
-    select * from "mage_db"."public"."real_estate_data"
-
+    select * 
+    from "mage_db"."public"."real_estate_data"
 ),
 
 renamed as (
-
     select
         unique_id,
         price,
@@ -41,10 +39,9 @@ renamed as (
         built_area,
         number_of_bathrooms,
         push_date
-
     from source
-
 )
 
-select * from renamed
+select * 
+from renamed
   );

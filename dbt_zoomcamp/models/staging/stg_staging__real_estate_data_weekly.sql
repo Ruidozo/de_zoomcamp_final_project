@@ -39,6 +39,15 @@ renamed as (
 
     from source
 
+),
+joined as (
+    select 
+        renamed.*,
+        pt."Latitude" as latitude,
+        pt."Longitude" as longitude
+    from renamed
+    left join {{ ref('pt') }} pt
+    on LOWER(renamed.city) = LOWER(pt.municipio)
 )
 
-select * from renamed
+select * from joined

@@ -1,6 +1,7 @@
 import os
 import pandas as pd
 import kagglehub
+import gc  # Import garbage collection module
 
 if 'data_loader' not in globals():
     from mage_ai.data_preparation.decorators import data_loader
@@ -11,8 +12,13 @@ if 'test' not in globals():
 def load_data_from_kaggle(*args, **kwargs):
     """
     Load data from Kaggle using KaggleHub.
+    Free memory before starting the pipeline.
     """
     try:
+        # Free up memory before loading data
+        gc.collect()
+        print("Memory freed before loading data.")
+
         # Download the latest version of the dataset
         path = kagglehub.dataset_download("luvathoms/portugal-real-estate-2024")
         print("Path to dataset files:", path)

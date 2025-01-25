@@ -1,0 +1,1102 @@
+[0m14:58:36.442296 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": true, "command_wall_clock_time": 25.360945, "process_user_time": 64.240906, "process_kernel_time": 5.560389, "process_mem_max_rss": "1512576", "process_in_blocks": "203408", "process_out_blocks": "118872"}
+[0m14:58:36.648256 [debug] [MainThread]: Command `cli show` succeeded at 14:58:36.647565 after 25.62 seconds
+[0m14:58:36.677273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f13414a5630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1326664670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f1326665ab0>]}
+[0m14:58:36.691587 [debug] [MainThread]: Flushing usage events
+[0m15:10:30.002831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d37d60520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33b65ae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33cd2320>]}
+
+
+============================== 15:10:30.033673 | 1361f0de-62f4-4ecc-bee4-27bd3e28436d ==============================
+[0m15:10:30.033673 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:10:30.035032 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/src/de-zoomcamp-project/.profiles_interpolated_temp_edb1b920-7bd1-4082-a570-f3ab80d59f09', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/src/de-zoomcamp-project/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt start de-zoomcamp-project', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:10:31.717960 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33cd12d0>]}
+[0m15:10:31.860180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33b26cb0>]}
+[0m15:10:31.862376 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m15:10:31.895988 [debug] [MainThread]: checksum: 2e10ab02ee6a9bc6342c89c0df2ac20d295c0f0c4521afc6e81eb0ebd7900256, vars: {'block_uuid': 'dbt/models/staging/stg_staging__real_estate_data',
+ 'configuration': {'dbt_project_name': 'dbt',
+                   'file_path': 'dbt/models/staging/stg_staging__real_estate_data.sql',
+                   'file_source': {'path': 'dbt/models/staging/stg_staging__real_estate_data.sql',
+                                   'project_path': 'dbt'}},
+ 'context': {},
+ 'ds': '2025-01-25',
+ 'env': 'prod',
+ 'event': {},
+ 'execution_date': '2025-01-25T15:09:19.133715',
+ 'execution_partition': '33/20250125T150919',
+ 'hr': '15',
+ 'interval_start_datetime': '2025-01-25T15:09:19.133715',
+ 'pipeline_run_id': 39,
+ 'pipeline_uuid': 'real_estate',
+ 'repo_path': '/home/src/de-zoomcamp-project',
+ 'retry': {'attempts': 1},
+ 'trigger_name': 'spiritual cloud'}, profile: , target: , version: 1.7.4
+[0m15:10:31.926012 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m15:10:31.927255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32f66440>]}
+[0m15:10:34.357154 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d328a64a0>]}
+[0m15:10:34.749706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32a8aad0>]}
+[0m15:10:34.750688 [info ] [MainThread]: Found 7 models, 1 seed, 6 sources, 0 exposures, 0 metrics, 539 macros, 0 groups, 0 semantic models
+[0m15:10:34.753510 [info ] [MainThread]: 
+[0m15:10:34.755310 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:10:34.757191 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db'
+[0m15:10:34.773845 [debug] [ThreadPool]: Using postgres connection "list_mage_db"
+[0m15:10:34.774589 [debug] [ThreadPool]: On list_mage_db: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:10:34.775225 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:34.812606 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m15:10:34.815608 [debug] [ThreadPool]: On list_mage_db: Close
+[0m15:10:34.819645 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db_public'
+[0m15:10:34.829029 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:34.829677 [debug] [ThreadPool]: On list_mage_db_public: BEGIN
+[0m15:10:34.830216 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:34.845742 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:34.846667 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:34.847499 [debug] [ThreadPool]: On list_mage_db_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:10:34.880803 [debug] [ThreadPool]: SQL status: SELECT 13 in 0.0 seconds
+[0m15:10:34.883241 [debug] [ThreadPool]: On list_mage_db_public: ROLLBACK
+[0m15:10:34.884292 [debug] [ThreadPool]: On list_mage_db_public: Close
+[0m15:10:34.886695 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mage_db_public, now list_mage_db_public_public)
+[0m15:10:34.894609 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:34.895188 [debug] [ThreadPool]: On list_mage_db_public_public: BEGIN
+[0m15:10:34.895766 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:10:34.911704 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:34.912479 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:34.913369 [debug] [ThreadPool]: On list_mage_db_public_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m15:10:34.917577 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m15:10:34.919783 [debug] [ThreadPool]: On list_mage_db_public_public: ROLLBACK
+[0m15:10:34.920571 [debug] [ThreadPool]: On list_mage_db_public_public: Close
+[0m15:10:34.930327 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:34.930993 [debug] [MainThread]: On master: BEGIN
+[0m15:10:34.931588 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:10:34.947977 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:34.948730 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:34.949486 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:10:35.032161 [debug] [MainThread]: SQL status: SELECT 5 in 0.0 seconds
+[0m15:10:35.035852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d329d9e70>]}
+[0m15:10:35.036635 [debug] [MainThread]: On master: ROLLBACK
+[0m15:10:35.037452 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:35.038010 [debug] [MainThread]: On master: BEGIN
+[0m15:10:35.038977 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:35.039590 [debug] [MainThread]: On master: COMMIT
+[0m15:10:35.040121 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:35.040657 [debug] [MainThread]: On master: COMMIT
+[0m15:10:35.041347 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:35.041923 [debug] [MainThread]: On master: Close
+[0m15:10:35.043502 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:10:35.045174 [info ] [MainThread]: 
+[0m15:10:35.048308 [debug] [Thread-2 (]: Began running node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:10:35.049187 [info ] [Thread-2 (]: 1 of 1 START sql view model public.stg_staging__real_estate_data ............... [RUN]
+[0m15:10:35.050737 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_mage_db_public_public, now model.dbt_zoomcamp.stg_staging__real_estate_data)
+[0m15:10:35.051435 [debug] [Thread-2 (]: Began compiling node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:10:35.056699 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.057895 [debug] [Thread-2 (]: Timing info for model.dbt_zoomcamp.stg_staging__real_estate_data (compile): 15:10:35.051872 => 15:10:35.057374
+[0m15:10:35.058557 [debug] [Thread-2 (]: Began executing node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:10:35.123740 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.131842 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.132954 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: BEGIN
+[0m15:10:35.133813 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:10:35.158574 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:35.159962 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.161057 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_staging__real_estate_data"} */
+
+  create view "mage_db"."public"."stg_staging__real_estate_data__dbt_tmp"
+    
+    
+  as (
+    with 
+
+source as (
+    select * 
+    from "mage_db"."public"."real_estate_data"
+),
+
+renamed as (
+    select
+        unique_id,
+        price,
+        district,
+        city,
+        town,
+        _type,
+        energy_certificate,
+        gross_area,
+        total_area,
+        parking,
+        has_parking,
+        _floor,
+        construction_year,
+        energy_efficiency_level,
+        publish_date,
+        garage,
+        elevator,
+        electric_cars_charging,
+        total_rooms,
+        number_of_bedrooms,
+        number_of_w_c,
+        conservation_status,
+        living_area,
+        lot_size,
+        built_area,
+        number_of_bathrooms,
+        push_date
+    from source
+)
+
+select * 
+from renamed
+  );
+[0m15:10:35.262834 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:10:35.273730 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.274498 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_staging__real_estate_data"} */
+alter table "mage_db"."public"."stg_staging__real_estate_data" rename to "stg_staging__real_estate_data__dbt_backup"
+[0m15:10:35.275858 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:10:35.280833 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.281467 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_staging__real_estate_data"} */
+alter table "mage_db"."public"."stg_staging__real_estate_data__dbt_tmp" rename to "stg_staging__real_estate_data"
+[0m15:10:35.282688 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:10:35.308085 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: COMMIT
+[0m15:10:35.309357 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.310218 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: COMMIT
+[0m15:10:35.314547 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:35.324869 [debug] [Thread-2 (]: Applying DROP to: "mage_db"."public"."stg_staging__real_estate_data__dbt_backup"
+[0m15:10:35.332055 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:10:35.333234 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_staging__real_estate_data"} */
+drop view if exists "mage_db"."public"."stg_staging__real_estate_data__dbt_backup" cascade
+[0m15:10:35.347889 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:10:35.350523 [debug] [Thread-2 (]: Timing info for model.dbt_zoomcamp.stg_staging__real_estate_data (execute): 15:10:35.058915 => 15:10:35.350199
+[0m15:10:35.351205 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: Close
+[0m15:10:35.352947 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1361f0de-62f4-4ecc-bee4-27bd3e28436d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32f93700>]}
+[0m15:10:35.354498 [info ] [Thread-2 (]: 1 of 1 OK created sql view model public.stg_staging__real_estate_data .......... [[32mCREATE VIEW[0m in 0.30s]
+[0m15:10:35.356115 [debug] [Thread-2 (]: Finished running node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:10:35.358125 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:35.358691 [debug] [MainThread]: On master: BEGIN
+[0m15:10:35.359217 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:10:35.374545 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:35.375251 [debug] [MainThread]: On master: COMMIT
+[0m15:10:35.375904 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:35.376433 [debug] [MainThread]: On master: COMMIT
+[0m15:10:35.377114 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:35.377664 [debug] [MainThread]: On master: Close
+[0m15:10:35.379158 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:10:35.379994 [debug] [MainThread]: Connection 'list_mage_db' was properly closed.
+[0m15:10:35.380740 [debug] [MainThread]: Connection 'model.dbt_zoomcamp.stg_staging__real_estate_data' was properly closed.
+[0m15:10:35.381492 [info ] [MainThread]: 
+[0m15:10:35.382569 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.63 seconds (0.63s).
+[0m15:10:35.384106 [debug] [MainThread]: Command end result
+[0m15:10:35.401660 [info ] [MainThread]: 
+[0m15:10:35.402990 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:10:35.404082 [info ] [MainThread]: 
+[0m15:10:35.405208 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:10:35.406472 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 5.4925694, "process_user_time": 3.312819, "process_kernel_time": 0.251414, "process_mem_max_rss": "298368", "process_in_blocks": "9192", "process_out_blocks": "3592"}
+[0m15:10:35.407365 [debug] [MainThread]: Command `cli build` succeeded at 15:10:35.407130 after 5.49 seconds
+[0m15:10:35.408036 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d37d60520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d328fb100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33b26cb0>]}
+[0m15:10:35.408676 [debug] [MainThread]: Flushing usage events
+[0m15:10:39.938625 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d37d60520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33922a40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33922ad0>]}
+
+
+============================== 15:10:39.943820 | b9fe971a-fb3d-4402-8312-cbe1bc2e3651 ==============================
+[0m15:10:39.943820 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:10:39.945097 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/src/de-zoomcamp-project/.profiles_interpolated_temp_01c26c38-179c-468c-995b-482fe52eba84', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/src/de-zoomcamp-project/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt start de-zoomcamp-project', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:10:40.276896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d36bdd1e0>]}
+[0m15:10:40.420150 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32e4d090>]}
+[0m15:10:40.421442 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m15:10:40.451472 [debug] [MainThread]: checksum: 25552e2405ec07bddbac191310ebaee81107cdfff7b8352abb7d21a422f36689, vars: {'block_uuid': 'dbt/models/staging/stg_cleaned_real_estate_data',
+ 'configuration': {'dbt_project_name': 'dbt',
+                   'file_path': 'dbt/models/staging/stg_cleaned_real_estate_data.sql',
+                   'file_source': {'path': 'dbt/models/staging/stg_cleaned_real_estate_data.sql',
+                                   'project_path': 'dbt'}},
+ 'context': {},
+ 'ds': '2025-01-25',
+ 'env': 'prod',
+ 'event': {},
+ 'execution_date': '2025-01-25T15:09:19.133715',
+ 'execution_partition': '33/20250125T150919',
+ 'hr': '15',
+ 'interval_start_datetime': '2025-01-25T15:09:19.133715',
+ 'pipeline_run_id': 39,
+ 'pipeline_uuid': 'real_estate',
+ 'repo_path': '/home/src/de-zoomcamp-project',
+ 'retry': {'attempts': 1},
+ 'trigger_name': 'spiritual cloud'}, profile: , target: , version: 1.7.4
+[0m15:10:40.472749 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m15:10:40.474130 [debug] [MainThread]: previous checksum: 25552e2405ec07bddbac191310ebaee81107cdfff7b8352abb7d21a422f36689, current checksum: 2e10ab02ee6a9bc6342c89c0df2ac20d295c0f0c4521afc6e81eb0ebd7900256
+[0m15:10:40.474805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32e89750>]}
+[0m15:10:42.911981 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32d773a0>]}
+[0m15:10:42.931560 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32e8b3d0>]}
+[0m15:10:42.932513 [info ] [MainThread]: Found 7 models, 1 seed, 6 sources, 0 exposures, 0 metrics, 539 macros, 0 groups, 0 semantic models
+[0m15:10:42.935129 [info ] [MainThread]: 
+[0m15:10:42.936856 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:10:42.938650 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db'
+[0m15:10:42.954304 [debug] [ThreadPool]: Using postgres connection "list_mage_db"
+[0m15:10:42.954991 [debug] [ThreadPool]: On list_mage_db: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:10:42.955569 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:42.972075 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m15:10:42.974670 [debug] [ThreadPool]: On list_mage_db: Close
+[0m15:10:42.978739 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db_public'
+[0m15:10:42.988441 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:42.989119 [debug] [ThreadPool]: On list_mage_db_public: BEGIN
+[0m15:10:42.989655 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:43.005333 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:43.006011 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:43.006603 [debug] [ThreadPool]: On list_mage_db_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:10:43.010569 [debug] [ThreadPool]: SQL status: SELECT 12 in 0.0 seconds
+[0m15:10:43.012786 [debug] [ThreadPool]: On list_mage_db_public: ROLLBACK
+[0m15:10:43.013479 [debug] [ThreadPool]: On list_mage_db_public: Close
+[0m15:10:43.015679 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mage_db_public, now list_mage_db_public_public)
+[0m15:10:43.022911 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:43.023461 [debug] [ThreadPool]: On list_mage_db_public_public: BEGIN
+[0m15:10:43.023971 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:10:43.039264 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:43.039964 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:43.040573 [debug] [ThreadPool]: On list_mage_db_public_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m15:10:43.044541 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m15:10:43.046423 [debug] [ThreadPool]: On list_mage_db_public_public: ROLLBACK
+[0m15:10:43.047078 [debug] [ThreadPool]: On list_mage_db_public_public: Close
+[0m15:10:43.056025 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:43.056585 [debug] [MainThread]: On master: BEGIN
+[0m15:10:43.057094 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:10:43.072314 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:43.072973 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:43.073672 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:10:43.078764 [debug] [MainThread]: SQL status: SELECT 4 in 0.0 seconds
+[0m15:10:43.081879 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32e8b430>]}
+[0m15:10:43.082583 [debug] [MainThread]: On master: ROLLBACK
+[0m15:10:43.083265 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:43.083860 [debug] [MainThread]: On master: BEGIN
+[0m15:10:43.084909 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:43.085451 [debug] [MainThread]: On master: COMMIT
+[0m15:10:43.085980 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:43.086491 [debug] [MainThread]: On master: COMMIT
+[0m15:10:43.087140 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:43.087737 [debug] [MainThread]: On master: Close
+[0m15:10:43.089313 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:10:43.090854 [info ] [MainThread]: 
+[0m15:10:43.094237 [debug] [Thread-2 (]: Began running node model.dbt_zoomcamp.stg_cleaned_real_estate_data
+[0m15:10:43.095122 [info ] [Thread-2 (]: 1 of 1 START sql view model public.stg_cleaned_real_estate_data ................ [RUN]
+[0m15:10:43.096802 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_mage_db_public_public, now model.dbt_zoomcamp.stg_cleaned_real_estate_data)
+[0m15:10:43.097477 [debug] [Thread-2 (]: Began compiling node model.dbt_zoomcamp.stg_cleaned_real_estate_data
+[0m15:10:43.103999 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.105087 [debug] [Thread-2 (]: Timing info for model.dbt_zoomcamp.stg_cleaned_real_estate_data (compile): 15:10:43.097874 => 15:10:43.104633
+[0m15:10:43.105722 [debug] [Thread-2 (]: Began executing node model.dbt_zoomcamp.stg_cleaned_real_estate_data
+[0m15:10:43.157784 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.159035 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.159783 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: BEGIN
+[0m15:10:43.160410 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:10:43.176039 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:43.176835 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.177574 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_cleaned_real_estate_data"} */
+
+  create view "mage_db"."public"."stg_cleaned_real_estate_data__dbt_tmp"
+    
+    
+  as (
+    WITH base AS (
+    SELECT *,
+           CASE 
+               -- If _type is 'farm' or 'land', prioritize total_area
+               WHEN LOWER(_type) IN ('farm', 'land') THEN total_area
+               -- If total_area is large and gross_area is valid, use gross_area
+               WHEN total_area > 1000 AND gross_area > 0 THEN gross_area
+               -- Fallback to total_area
+               ELSE total_area
+           END AS effective_area,
+           -- Calculate price_per_sqm for filtering
+           price / NULLIF(
+               CASE 
+                   WHEN LOWER(_type) IN ('farm', 'land') THEN total_area
+                   WHEN total_area > 1000 AND gross_area > 0 THEN gross_area
+                   ELSE total_area
+               END, 0
+           ) AS price_per_sqm
+    FROM "mage_db"."public"."stg_staging__real_estate_data"
+)
+SELECT *
+FROM base
+WHERE effective_area > 10
+  AND (
+      -- Relax price_per_sqm for general cases
+      price_per_sqm BETWEEN 50 AND 100000
+      OR LOWER(_type) IN ('farm', 'land') -- Skip price_per_sqm filter for farms/land
+  )
+  );
+[0m15:10:43.186348 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m15:10:43.196560 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.197270 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_cleaned_real_estate_data"} */
+alter table "mage_db"."public"."stg_cleaned_real_estate_data__dbt_tmp" rename to "stg_cleaned_real_estate_data"
+[0m15:10:43.198510 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:10:43.219150 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: COMMIT
+[0m15:10:43.219942 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.220580 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: COMMIT
+[0m15:10:43.222920 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:43.232948 [debug] [Thread-2 (]: Applying DROP to: "mage_db"."public"."stg_cleaned_real_estate_data__dbt_backup"
+[0m15:10:43.240341 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.stg_cleaned_real_estate_data"
+[0m15:10:43.241132 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_cleaned_real_estate_data"} */
+drop view if exists "mage_db"."public"."stg_cleaned_real_estate_data__dbt_backup" cascade
+[0m15:10:43.242136 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m15:10:43.244499 [debug] [Thread-2 (]: Timing info for model.dbt_zoomcamp.stg_cleaned_real_estate_data (execute): 15:10:43.106070 => 15:10:43.244193
+[0m15:10:43.245135 [debug] [Thread-2 (]: On model.dbt_zoomcamp.stg_cleaned_real_estate_data: Close
+[0m15:10:43.246784 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b9fe971a-fb3d-4402-8312-cbe1bc2e3651', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32c27ac0>]}
+[0m15:10:43.248287 [info ] [Thread-2 (]: 1 of 1 OK created sql view model public.stg_cleaned_real_estate_data ........... [[32mCREATE VIEW[0m in 0.15s]
+[0m15:10:43.249963 [debug] [Thread-2 (]: Finished running node model.dbt_zoomcamp.stg_cleaned_real_estate_data
+[0m15:10:43.252043 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:43.252619 [debug] [MainThread]: On master: BEGIN
+[0m15:10:43.253155 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:10:43.288230 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:43.289266 [debug] [MainThread]: On master: COMMIT
+[0m15:10:43.290059 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:43.290746 [debug] [MainThread]: On master: COMMIT
+[0m15:10:43.291913 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:43.292642 [debug] [MainThread]: On master: Close
+[0m15:10:43.294155 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:10:43.294798 [debug] [MainThread]: Connection 'list_mage_db' was properly closed.
+[0m15:10:43.295481 [debug] [MainThread]: Connection 'model.dbt_zoomcamp.stg_cleaned_real_estate_data' was properly closed.
+[0m15:10:43.296226 [info ] [MainThread]: 
+[0m15:10:43.298251 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.36 seconds (0.36s).
+[0m15:10:43.300611 [debug] [MainThread]: Command end result
+[0m15:10:43.323619 [info ] [MainThread]: 
+[0m15:10:43.324951 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:10:43.325873 [info ] [MainThread]: 
+[0m15:10:43.326844 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:10:43.328103 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 3.4660022, "process_user_time": 3.287988, "process_kernel_time": 0.196516, "process_mem_max_rss": "298448", "process_out_blocks": "3600", "process_in_blocks": "0"}
+[0m15:10:43.328940 [debug] [MainThread]: Command `cli build` succeeded at 15:10:43.328735 after 3.47 seconds
+[0m15:10:43.329541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d37d60520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d36bdd1b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32f12f50>]}
+[0m15:10:43.330162 [debug] [MainThread]: Flushing usage events
+[0m15:10:50.025321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d37d60520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33927cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33927c40>]}
+
+
+============================== 15:10:50.030400 | 199441a7-8b10-400e-8b05-6310a9c8910b ==============================
+[0m15:10:50.030400 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:10:50.031845 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/src/de-zoomcamp-project/.profiles_interpolated_temp_e70fe8c3-3071-436e-87f1-b8769ae389d3', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/src/de-zoomcamp-project/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt start de-zoomcamp-project', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:10:50.374156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33a8b0a0>]}
+[0m15:10:50.517942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33927be0>]}
+[0m15:10:50.519247 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m15:10:50.549074 [debug] [MainThread]: checksum: 8da15b06fbba63aac74f6d85dae4640fb1260180ae6bf8d884d6c64bc81e9ed3, vars: {'block_uuid': 'dbt/models/core/real_estate_data_w_geolocation',
+ 'configuration': {'dbt_project_name': 'dbt',
+                   'file_path': 'dbt/models/core/real_estate_data_w_geolocation.sql',
+                   'file_source': {'path': 'dbt/models/core/real_estate_data_w_geolocation.sql',
+                                   'project_path': 'dbt'}},
+ 'context': {},
+ 'ds': '2025-01-25',
+ 'env': 'prod',
+ 'event': {},
+ 'execution_date': '2025-01-25T15:09:19.133715',
+ 'execution_partition': '33/20250125T150919',
+ 'hr': '15',
+ 'interval_start_datetime': '2025-01-25T15:09:19.133715',
+ 'pipeline_run_id': 39,
+ 'pipeline_uuid': 'real_estate',
+ 'repo_path': '/home/src/de-zoomcamp-project',
+ 'retry': {'attempts': 1},
+ 'trigger_name': 'spiritual cloud'}, profile: , target: , version: 1.7.4
+[0m15:10:50.570235 [info ] [MainThread]: Unable to do partial parsing because config vars, config profile, or config target have changed
+[0m15:10:50.571637 [debug] [MainThread]: previous checksum: 8da15b06fbba63aac74f6d85dae4640fb1260180ae6bf8d884d6c64bc81e9ed3, current checksum: 25552e2405ec07bddbac191310ebaee81107cdfff7b8352abb7d21a422f36689
+[0m15:10:50.572286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32f97a00>]}
+[0m15:10:53.033087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32d38310>]}
+[0m15:10:53.051917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32944820>]}
+[0m15:10:53.052968 [info ] [MainThread]: Found 7 models, 1 seed, 6 sources, 0 exposures, 0 metrics, 539 macros, 0 groups, 0 semantic models
+[0m15:10:53.055661 [info ] [MainThread]: 
+[0m15:10:53.057364 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:10:53.059135 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db'
+[0m15:10:53.075168 [debug] [ThreadPool]: Using postgres connection "list_mage_db"
+[0m15:10:53.075946 [debug] [ThreadPool]: On list_mage_db: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m15:10:53.076526 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:53.093156 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.0 seconds
+[0m15:10:53.095858 [debug] [ThreadPool]: On list_mage_db: Close
+[0m15:10:53.099727 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db_public'
+[0m15:10:53.109067 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:53.109695 [debug] [ThreadPool]: On list_mage_db_public: BEGIN
+[0m15:10:53.110226 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:53.125884 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:53.126596 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:53.127231 [debug] [ThreadPool]: On list_mage_db_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:10:53.131500 [debug] [ThreadPool]: SQL status: SELECT 13 in 0.0 seconds
+[0m15:10:53.133853 [debug] [ThreadPool]: On list_mage_db_public: ROLLBACK
+[0m15:10:53.134639 [debug] [ThreadPool]: On list_mage_db_public: Close
+[0m15:10:53.136980 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mage_db_public, now list_mage_db_public_public)
+[0m15:10:53.141556 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:53.145532 [debug] [ThreadPool]: On list_mage_db_public_public: BEGIN
+[0m15:10:53.146077 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:10:53.162111 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:53.162863 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:53.163596 [debug] [ThreadPool]: On list_mage_db_public_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m15:10:53.167942 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m15:10:53.169895 [debug] [ThreadPool]: On list_mage_db_public_public: ROLLBACK
+[0m15:10:53.170710 [debug] [ThreadPool]: On list_mage_db_public_public: Close
+[0m15:10:53.181012 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:53.181635 [debug] [MainThread]: On master: BEGIN
+[0m15:10:53.182186 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:10:53.198211 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:53.198888 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:53.199616 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:10:53.205071 [debug] [MainThread]: SQL status: SELECT 5 in 0.0 seconds
+[0m15:10:53.208535 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32d4b6d0>]}
+[0m15:10:53.209276 [debug] [MainThread]: On master: ROLLBACK
+[0m15:10:53.210040 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:53.210609 [debug] [MainThread]: On master: BEGIN
+[0m15:10:53.211567 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:53.212161 [debug] [MainThread]: On master: COMMIT
+[0m15:10:53.212732 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:53.213394 [debug] [MainThread]: On master: COMMIT
+[0m15:10:53.214115 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:53.214696 [debug] [MainThread]: On master: Close
+[0m15:10:53.216393 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:10:53.217939 [info ] [MainThread]: 
+[0m15:10:53.221640 [debug] [Thread-2 (]: Began running node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:53.222615 [info ] [Thread-2 (]: 1 of 1 START sql table model public.real_estate_data_w_geolocation ............. [RUN]
+[0m15:10:53.224236 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_mage_db_public_public, now model.dbt_zoomcamp.real_estate_data_w_geolocation)
+[0m15:10:53.224893 [debug] [Thread-2 (]: Began compiling node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:53.230660 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:53.233493 [debug] [Thread-2 (]: Timing info for model.dbt_zoomcamp.real_estate_data_w_geolocation (compile): 15:10:53.225287 => 15:10:53.232997
+[0m15:10:53.234180 [debug] [Thread-2 (]: Began executing node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:53.313806 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:53.316118 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:53.316903 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: BEGIN
+[0m15:10:53.317518 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:10:53.332876 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:53.333690 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:53.334402 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.real_estate_data_w_geolocation"} */
+
+  
+    
+
+  create  table "mage_db"."public"."real_estate_data_w_geolocation__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+with 
+
+cleaned_real_estate as (
+    select * 
+    from "mage_db"."public"."stg_cleaned_real_estate_data"
+),
+
+geolocation_data as (
+    select 
+        municipio,
+        "Latitude",
+        "Longitude"
+    from "mage_db"."public_public"."pt"
+),
+
+joined_with_geolocation as (
+    select
+        cleaned_real_estate.*,
+        geolocation_data."Latitude" as latitude,
+        geolocation_data."Longitude" as longitude
+    from cleaned_real_estate
+    left join geolocation_data
+    on LOWER(cleaned_real_estate.city) = LOWER(geolocation_data.municipio)
+)
+
+select * 
+from joined_with_geolocation
+  );
+  
+[0m15:10:54.304337 [debug] [Thread-2 (]: SQL status: SELECT 114410 in 1.0 seconds
+[0m15:10:54.315092 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:54.315955 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.real_estate_data_w_geolocation"} */
+alter table "mage_db"."public"."real_estate_data_w_geolocation" rename to "real_estate_data_w_geolocation__dbt_backup"
+[0m15:10:54.317136 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:10:54.322120 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:54.322763 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.real_estate_data_w_geolocation"} */
+alter table "mage_db"."public"."real_estate_data_w_geolocation__dbt_tmp" rename to "real_estate_data_w_geolocation"
+[0m15:10:54.323833 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m15:10:54.354002 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: COMMIT
+[0m15:10:54.354808 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:54.355488 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: COMMIT
+[0m15:10:54.387039 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:54.397852 [debug] [Thread-2 (]: Applying DROP to: "mage_db"."public"."real_estate_data_w_geolocation__dbt_backup"
+[0m15:10:54.405478 [debug] [Thread-2 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:54.406353 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.real_estate_data_w_geolocation"} */
+drop table if exists "mage_db"."public"."real_estate_data_w_geolocation__dbt_backup" cascade
+[0m15:10:54.448854 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m15:10:54.451834 [debug] [Thread-2 (]: Timing info for model.dbt_zoomcamp.real_estate_data_w_geolocation (execute): 15:10:53.234530 => 15:10:54.451434
+[0m15:10:54.452574 [debug] [Thread-2 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: Close
+[0m15:10:54.454341 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '199441a7-8b10-400e-8b05-6310a9c8910b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32aef400>]}
+[0m15:10:54.455961 [info ] [Thread-2 (]: 1 of 1 OK created sql table model public.real_estate_data_w_geolocation ........ [[32mSELECT 114410[0m in 1.23s]
+[0m15:10:54.458028 [debug] [Thread-2 (]: Finished running node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:54.460178 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:54.460717 [debug] [MainThread]: On master: BEGIN
+[0m15:10:54.461226 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:10:54.477206 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:54.478000 [debug] [MainThread]: On master: COMMIT
+[0m15:10:54.478670 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:54.479273 [debug] [MainThread]: On master: COMMIT
+[0m15:10:54.480264 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m15:10:54.480881 [debug] [MainThread]: On master: Close
+[0m15:10:54.482290 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:10:54.483126 [debug] [MainThread]: Connection 'list_mage_db' was properly closed.
+[0m15:10:54.483944 [debug] [MainThread]: Connection 'model.dbt_zoomcamp.real_estate_data_w_geolocation' was properly closed.
+[0m15:10:54.484795 [info ] [MainThread]: 
+[0m15:10:54.485902 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 1.43 seconds (1.43s).
+[0m15:10:54.487486 [debug] [MainThread]: Command end result
+[0m15:10:54.505390 [info ] [MainThread]: 
+[0m15:10:54.506829 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:10:54.507821 [info ] [MainThread]: 
+[0m15:10:54.508835 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m15:10:54.510350 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 4.562864, "process_user_time": 3.296465, "process_kernel_time": 0.257359, "process_mem_max_rss": "298576", "process_in_blocks": "272", "process_out_blocks": "3592"}
+[0m15:10:54.511253 [debug] [MainThread]: Command `cli build` succeeded at 15:10:54.511043 after 4.56 seconds
+[0m15:10:54.511939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d37d60520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d3281abf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33927be0>]}
+[0m15:10:54.512654 [debug] [MainThread]: Flushing usage events
+[0m15:10:54.925271 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33cd3a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32bae050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32bae380>]}
+
+
+============================== 15:10:54.926317 | 70636080-a659-49f7-8427-b978adf9e248 ==============================
+[0m15:10:54.926317 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:10:54.927850 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/src/de-zoomcamp-project/.profiles_interpolated_temp_e70fe8c3-3071-436e-87f1-b8769ae389d3', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/home/src/de-zoomcamp-project/dbt/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'invocation_command': 'dbt start de-zoomcamp-project', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:10:55.036400 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '70636080-a659-49f7-8427-b978adf9e248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d33a8b910>]}
+[0m15:10:55.042006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '70636080-a659-49f7-8427-b978adf9e248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d32946740>]}
+[0m15:10:55.043534 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m15:10:55.078190 [debug] [MainThread]: checksum: 8da15b06fbba63aac74f6d85dae4640fb1260180ae6bf8d884d6c64bc81e9ed3, vars: {'block_uuid': 'dbt/models/core/real_estate_data_w_geolocation',
+ 'configuration': {'dbt_project_name': 'dbt',
+                   'file_path': 'dbt/models/core/real_estate_data_w_geolocation.sql',
+                   'file_source': {'path': 'dbt/models/core/real_estate_data_w_geolocation.sql',
+                                   'project_path': 'dbt'}},
+ 'context': {},
+ 'ds': '2025-01-25',
+ 'env': 'prod',
+ 'event': {},
+ 'execution_date': '2025-01-25T15:09:19.133715',
+ 'execution_partition': '33/20250125T150919',
+ 'hr': '15',
+ 'interval_start_datetime': '2025-01-25T15:09:19.133715',
+ 'pipeline_run_id': 39,
+ 'pipeline_uuid': 'real_estate',
+ 'repo_path': '/home/src/de-zoomcamp-project',
+ 'retry': {'attempts': 1},
+ 'trigger_name': 'spiritual cloud'}, profile: , target: , version: 1.7.4
+[0m15:10:55.163716 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:10:55.164879 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:10:55.179208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '70636080-a659-49f7-8427-b978adf9e248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d30e1bee0>]}
+[0m15:10:55.209288 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '70636080-a659-49f7-8427-b978adf9e248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d30dee4d0>]}
+[0m15:10:55.210624 [info ] [MainThread]: Found 7 models, 1 seed, 6 sources, 0 exposures, 0 metrics, 539 macros, 0 groups, 0 semantic models
+[0m15:10:55.212344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70636080-a659-49f7-8427-b978adf9e248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d30dee440>]}
+[0m15:10:55.214498 [info ] [MainThread]: 
+[0m15:10:55.216840 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:10:55.219733 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db_public'
+[0m15:10:55.229063 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:55.229882 [debug] [ThreadPool]: On list_mage_db_public: BEGIN
+[0m15:10:55.230551 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:10:55.254658 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:55.255786 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:10:55.256760 [debug] [ThreadPool]: On list_mage_db_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:10:55.262638 [debug] [ThreadPool]: SQL status: SELECT 13 in 0.0 seconds
+[0m15:10:55.266044 [debug] [ThreadPool]: On list_mage_db_public: ROLLBACK
+[0m15:10:55.267057 [debug] [ThreadPool]: On list_mage_db_public: Close
+[0m15:10:55.269469 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mage_db_public, now list_mage_db_public_public)
+[0m15:10:55.280430 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:55.281144 [debug] [ThreadPool]: On list_mage_db_public_public: BEGIN
+[0m15:10:55.281781 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:10:55.307802 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:55.308925 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:10:55.309882 [debug] [ThreadPool]: On list_mage_db_public_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m15:10:55.315657 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m15:10:55.318719 [debug] [ThreadPool]: On list_mage_db_public_public: ROLLBACK
+[0m15:10:55.319797 [debug] [ThreadPool]: On list_mage_db_public_public: Close
+[0m15:10:55.329480 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:55.330207 [debug] [MainThread]: On master: BEGIN
+[0m15:10:55.330862 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:10:55.355469 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:10:55.356637 [debug] [MainThread]: Using postgres connection "master"
+[0m15:10:55.357777 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:10:55.365564 [debug] [MainThread]: SQL status: SELECT 5 in 0.0 seconds
+[0m15:10:55.370534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '70636080-a659-49f7-8427-b978adf9e248', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d328c29e0>]}
+[0m15:10:55.371562 [debug] [MainThread]: On master: ROLLBACK
+[0m15:10:55.372522 [debug] [MainThread]: On master: Close
+[0m15:10:55.374310 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:10:55.379210 [info ] [MainThread]: 
+[0m15:10:55.382423 [debug] [Thread-6 (]: Began running node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:55.383982 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly list_mage_db_public_public, now model.dbt_zoomcamp.real_estate_data_w_geolocation)
+[0m15:10:55.384828 [debug] [Thread-6 (]: Began compiling node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:55.393625 [debug] [Thread-6 (]: Writing injected SQL for node "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:55.395003 [debug] [Thread-6 (]: Timing info for model.dbt_zoomcamp.real_estate_data_w_geolocation (compile): 15:10:55.385329 => 15:10:55.394476
+[0m15:10:55.395864 [debug] [Thread-6 (]: Began executing node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:10:55.408177 [debug] [Thread-6 (]: Using postgres connection "model.dbt_zoomcamp.real_estate_data_w_geolocation"
+[0m15:10:55.409194 [debug] [Thread-6 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.real_estate_data_w_geolocation"} */
+
+
+with 
+
+cleaned_real_estate as (
+    select * 
+    from "mage_db"."public"."stg_cleaned_real_estate_data"
+),
+
+geolocation_data as (
+    select 
+        municipio,
+        "Latitude",
+        "Longitude"
+    from "mage_db"."public_public"."pt"
+),
+
+joined_with_geolocation as (
+    select
+        cleaned_real_estate.*,
+        geolocation_data."Latitude" as latitude,
+        geolocation_data."Longitude" as longitude
+    from cleaned_real_estate
+    left join geolocation_data
+    on LOWER(cleaned_real_estate.city) = LOWER(geolocation_data.municipio)
+)
+
+select * 
+from joined_with_geolocation
+[0m15:10:55.410076 [debug] [Thread-6 (]: Opening a new connection, currently in state closed
+[0m15:10:56.591764 [debug] [Thread-6 (]: SQL status: SELECT 114410 in 1.0 seconds
+[0m15:11:10.711081 [debug] [Thread-6 (]: Timing info for model.dbt_zoomcamp.real_estate_data_w_geolocation (execute): 15:10:55.396368 => 15:11:10.710525
+[0m15:11:10.711981 [debug] [Thread-6 (]: On model.dbt_zoomcamp.real_estate_data_w_geolocation: Close
+[0m15:11:10.714272 [debug] [Thread-6 (]: Finished running node model.dbt_zoomcamp.real_estate_data_w_geolocation
+[0m15:11:10.716169 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:11:10.716965 [debug] [MainThread]: Connection 'model.dbt_zoomcamp.real_estate_data_w_geolocation' was properly closed.
+[0m15:11:10.718061 [debug] [MainThread]: Command end result
