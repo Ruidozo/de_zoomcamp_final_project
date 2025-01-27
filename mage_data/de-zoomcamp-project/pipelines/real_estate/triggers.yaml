@@ -1,7 +1,7 @@
 triggers:
 - description: null
   envs: []
-  last_enabled_at: 2025-01-18 17:47:06.165210
+  last_enabled_at: 2025-01-25 15:16:39.537848
   name: weekly_load_real_estate_data
   pipeline_uuid: real_estate
   schedule_interval: '@weekly'
@@ -9,6 +9,6 @@ triggers:
   settings: null
   sla: null
   start_time: 2025-01-12 05:00:00
-  status: inactive
-  token: "${SLACK_TRIGGER_TOKEN}"
+  status: active
+  token: ${SLACK_TRIGGER_TOKEN}
   variables: {}

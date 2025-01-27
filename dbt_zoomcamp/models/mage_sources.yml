@@ -1,0 +1,26 @@
+sources:
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_dbt
+  schema: public
+  tables:
+  - description: Dataframe for block `export_real_estate_data` of the `real_estate`
+      mage pipeline.
+    identifier: mage_real_estate_export_real_estate_data
+    meta:
+      block_uuid: export_real_estate_data
+      pipeline_uuid: real_estate
+    name: real_estate_export_real_estate_data
+- description: Dataframes Mage upstream blocks
+  loader: mage
+  name: mage_dbts
+  schema: public
+  tables:
+  - description: Dataframe for block `export_real_estate_data` of the `real_estate`
+      mage pipeline.
+    identifier: mage_real_estate_export_real_estate_data
+    meta:
+      block_uuid: export_real_estate_data
+      pipeline_uuid: real_estate
+    name: real_estate_export_real_estate_data
+version: 2

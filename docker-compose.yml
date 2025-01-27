@@ -12,6 +12,11 @@ services:
       POSTGRES_DB: mage_db
     volumes:
       - pg_data:/var/lib/postgresql/data
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: "1.0"
 
   mageai:
     build:
@@ -28,17 +33,11 @@ services:
     environment:
       - MAGE_PROJECT=de-zoomcamp-project
     command: ["mage", "start", "de-zoomcamp-project"]
-
-  dbt:
-    build:
-      context: .
-      dockerfile: dockerfile  # Ensure this path is correct
-    container_name: dbt
-    volumes:
-      - ./dbt:/usr/app/dbt
-    environment:
-      - DBT_PROFILES_DIR=/usr/app/dbt/profiles
-    command: ["dbt", "run"]
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+          cpus: "1.0"
 
 volumes:
   pg_data:

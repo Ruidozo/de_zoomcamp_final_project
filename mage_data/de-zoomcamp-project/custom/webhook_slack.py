@@ -5,13 +5,16 @@ if 'test' not in globals():
 import requests
 import os
 from dotenv import load_dotenv
+from mage_ai.data_preparation.repo_manager import get_repo_path
+from mage_ai.data_preparation.variable_manager import VariableManager
 
 # Load .env file
 load_dotenv()
 
+
 def notify_slack(pipeline_name, status, db_data=None):
     """
-    Sends a notification to Slack with the pipeline status and the number of rows exported.
+    Sends a notification to Slack with the pipeline status and number of rows exported.
     """
     # Access the webhook URL from environment variables
     webhook_url = os.getenv('SLACK_WEBHOOK_URL')
@@ -22,11 +25,14 @@ def notify_slack(pipeline_name, status, db_data=None):
     # Prepare the message
     if db_data and isinstance(db_data, int):
         message_text = (
-            f"Pipeline {pipeline_name} has completed with status: {status}.\n"
-            f"Number of rows exported to the database: {db_data}"
+            f"Pipeline `{pipeline_name}` has completed with status: {status}.\n"
+            f"Number of rows exported to the database: {db_data}."
         )
     else:
-        message_text = f"Pipeline {pipeline_name} has completed with status: {status}.\nNo data was exported."
+        message_text = (
+            f"Pipeline `{pipeline_name}` has completed with status: {status}.\n"
+            f"No data was exported."
+        )
 
     message = {"text": message_text}
 
@@ -43,7 +49,7 @@ def transform_custom(*args, **kwargs):
     """
     Sends a Slack notification with the number of rows exported.
     """
-    # Retrieve the DataFrame from the upstream block
+    # Retrieve the DataFrame from the upstream block, if available
     df_data = args[0] if args else None
 
     # Calculate the number of rows exported

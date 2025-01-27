@@ -4,5 +4,11 @@
 			"path": ".."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"dbt.enableNewLineagePanel": true,
+		"dbt.dbtIntegration": "core",
+		"dbt.altimateAiKey": "d88584b2a40778eec032124666addfaf",
+		"dbt.altimateInstanceName": "zoomcamp",
+		"dbt.dbtPythonPathOverride": ""
+	}
 }

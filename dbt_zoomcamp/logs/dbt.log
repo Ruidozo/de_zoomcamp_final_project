@@ -1,0 +1,1249 @@
+[0m15:19:10.657478 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": true, "command_wall_clock_time": 25.636978, "process_user_time": 26.73416, "process_kernel_time": 1.032384, "process_mem_max_rss": "1006564", "process_in_blocks": "16", "process_out_blocks": "68544"}
+[0m15:19:10.825230 [debug] [MainThread]: Command `cli show` succeeded at 15:19:10.824893 after 25.82 seconds
+[0m15:19:10.826041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d38a54970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d30df2d70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4d30df3b80>]}
+[0m15:19:10.826781 [debug] [MainThread]: Flushing usage events
+[0m15:41:15.922689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ff94283d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fd898e230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fd898d750>]}
+
+
+============================== 15:41:15.938565 | a00fcb92-155a-4651-b790-2cd55d6285d2 ==============================
+[0m15:41:15.938565 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:41:15.942518 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/src/de-zoomcamp-project/.profiles_interpolated_temp_69b9b301-40d5-4dca-b3ad-a6cb14ea8c6b', 'log_path': '/home/src/de-zoomcamp-project/dbt/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'invocation_command': 'dbt -f /tmp/tmpcq13dvvd.json', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:41:18.003900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ff8ef7910>]}
+[0m15:41:18.144652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fe7aa8b80>]}
+[0m15:41:18.146872 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m15:41:18.178517 [debug] [MainThread]: checksum: b2262653a17113b0527827777f2c547078581ed6c5545521e52ea2f7ef3a02d1, vars: {'block_uuid': 'dbt/models/staging/stg_staging__real_estate_data',
+ 'configuration': {'dbt_project_name': 'dbt',
+                   'file_path': 'dbt/models/staging/stg_staging__real_estate_data.sql',
+                   'file_source': {'path': 'dbt/models/staging/stg_staging__real_estate_data.sql',
+                                   'project_path': 'dbt'}},
+ 'context': {},
+ 'env': 'dev',
+ 'event': {},
+ 'execution_date': '2025-01-25T15:41:15.666440',
+ 'interval_end_datetime': '2025-01-26T15:41:15.666440',
+ 'interval_start_datetime': '2025-01-25T15:41:15.666440',
+ 'pipeline_uuid': 'real_estate',
+ 'repo_path': '/home/src/de-zoomcamp-project'}, profile: , target: , version: 1.7.4
+[0m15:41:18.220778 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m15:41:18.224328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4041008eb0>]}
+[0m15:41:20.465829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fdf5b80d0>]}
+[0m15:41:20.495333 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fd63dd8a0>]}
+[0m15:41:20.496300 [info ] [MainThread]: Found 7 models, 1 seed, 6 sources, 0 exposures, 0 metrics, 539 macros, 0 groups, 0 semantic models
+[0m15:41:20.499215 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fe773e470>]}
+[0m15:41:20.502195 [info ] [MainThread]: 
+[0m15:41:20.506656 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:41:20.509696 [debug] [ThreadPool]: Acquiring new postgres connection 'list_mage_db_public'
+[0m15:41:20.525961 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:41:20.526679 [debug] [ThreadPool]: On list_mage_db_public: BEGIN
+[0m15:41:20.527241 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:41:20.930969 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:41:20.932017 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public"
+[0m15:41:20.932926 [debug] [ThreadPool]: On list_mage_db_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:41:20.982804 [debug] [ThreadPool]: SQL status: SELECT 13 in 0.0 seconds
+[0m15:41:20.985310 [debug] [ThreadPool]: On list_mage_db_public: ROLLBACK
+[0m15:41:20.987151 [debug] [ThreadPool]: On list_mage_db_public: Close
+[0m15:41:20.989332 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_mage_db_public, now list_mage_db_public_public)
+[0m15:41:20.993895 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:41:20.998223 [debug] [ThreadPool]: On list_mage_db_public_public: BEGIN
+[0m15:41:20.998812 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:41:21.014502 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m15:41:21.015275 [debug] [ThreadPool]: Using postgres connection "list_mage_db_public_public"
+[0m15:41:21.016038 [debug] [ThreadPool]: On list_mage_db_public_public: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "list_mage_db_public_public"} */
+select
+      'mage_db' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_public'
+    union all
+    select
+      'mage_db' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_public'
+  
+[0m15:41:21.020071 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m15:41:21.021937 [debug] [ThreadPool]: On list_mage_db_public_public: ROLLBACK
+[0m15:41:21.022632 [debug] [ThreadPool]: On list_mage_db_public_public: Close
+[0m15:41:21.031987 [debug] [MainThread]: Using postgres connection "master"
+[0m15:41:21.032687 [debug] [MainThread]: On master: BEGIN
+[0m15:41:21.033256 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:41:21.048783 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m15:41:21.049521 [debug] [MainThread]: Using postgres connection "master"
+[0m15:41:21.050276 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m15:41:21.057963 [debug] [MainThread]: SQL status: SELECT 5 in 0.0 seconds
+[0m15:41:21.061602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a00fcb92-155a-4651-b790-2cd55d6285d2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fdf5bbc70>]}
+[0m15:41:21.062339 [debug] [MainThread]: On master: ROLLBACK
+[0m15:41:21.063100 [debug] [MainThread]: On master: Close
+[0m15:41:21.064606 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:41:21.067695 [info ] [MainThread]: 
+[0m15:41:21.073205 [debug] [Thread-5 (]: Began running node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:41:21.075251 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly list_mage_db_public_public, now model.dbt_zoomcamp.stg_staging__real_estate_data)
+[0m15:41:21.076239 [debug] [Thread-5 (]: Began compiling node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:41:21.082865 [debug] [Thread-5 (]: Writing injected SQL for node "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:41:21.084113 [debug] [Thread-5 (]: Timing info for model.dbt_zoomcamp.stg_staging__real_estate_data (compile): 15:41:21.077173 => 15:41:21.083649
+[0m15:41:21.084818 [debug] [Thread-5 (]: Began executing node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:41:21.095761 [debug] [Thread-5 (]: Using postgres connection "model.dbt_zoomcamp.stg_staging__real_estate_data"
+[0m15:41:21.096551 [debug] [Thread-5 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "dbt_zoomcamp", "target_name": "dev", "node_id": "model.dbt_zoomcamp.stg_staging__real_estate_data"} */
+
+  
+    select *
+    from (
+        with 
+
+source as (
+    select * 
+    from "mage_db"."public"."real_estate_data"
+),
+
+renamed as (
+    select
+        unique_id,
+        price,
+        district,
+        city,
+        town,
+        _type,
+        energy_certificate,
+        gross_area,
+        total_area,
+        parking,
+        has_parking,
+        _floor,
+        construction_year,
+        energy_efficiency_level,
+        publish_date,
+        garage,
+        elevator,
+        electric_cars_charging,
+        total_rooms,
+        number_of_bedrooms,
+        number_of_w_c,
+        conservation_status,
+        living_area,
+        lot_size,
+        built_area,
+        number_of_bathrooms,
+        push_date
+    from source
+)
+
+select * 
+from renamed
+    ) as model_limit_subq
+    limit 1000
+
+
+[0m15:41:21.097221 [debug] [Thread-5 (]: Opening a new connection, currently in state closed
+[0m15:41:21.116734 [debug] [Thread-5 (]: SQL status: SELECT 1000 in 0.0 seconds
+[0m15:41:21.224204 [debug] [Thread-5 (]: Timing info for model.dbt_zoomcamp.stg_staging__real_estate_data (execute): 15:41:21.085195 => 15:41:21.223669
+[0m15:41:21.225042 [debug] [Thread-5 (]: On model.dbt_zoomcamp.stg_staging__real_estate_data: Close
+[0m15:41:21.227224 [debug] [Thread-5 (]: Finished running node model.dbt_zoomcamp.stg_staging__real_estate_data
+[0m15:41:21.229009 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:41:21.229739 [debug] [MainThread]: Connection 'model.dbt_zoomcamp.stg_staging__real_estate_data' was properly closed.
+[0m15:41:21.230753 [debug] [MainThread]: Command end result
+[0m15:41:21.353547 [info ] [MainThread]: Previewing node 'stg_staging__real_estate_data':
+| unique_id      |      price | district  | city                 | town                 | _type               | ... |
+| -------------- | ---------- | --------- | -------------------- | -------------------- | ------------------- | --- |
+| NVRVCdMeCF     |    780,000 | Vila Real | Valpaços             | Carrazedo de Mont... | Farm                | ... |
+| GFFSBdASBdAA   |    223,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Apartment           | ... |
+| GFFSBdASBdAA   |    228,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Apartment           | ... |
+| 1FFSBdASBdAA   |    250,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Apartment           | ... |
+| 2FFSBdASBdAA   |    250,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Apartment           | ... |
+| 1FFSBdASBdAA   |    250,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Apartment           | ... |
+| NFAAeOdÁB      |  2,950,000 | Faro      | Albufeira            | Albufeira e Olhos... | Building            | ... |
+| NFCMAL         |    165,000 | Faro      | Castro Marim         | Altura               | Land                | ... |
+| 1FFAAeOdÁA     |      9,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFPPA         |    158,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFLSCA        |    250,000 | Faro      | Loulé                | São Clemente         | Apartment           | ... |
+| 3FFVdBBA       |    580,000 | Faro      | Vila do Bispo        | Budens               | Apartment           | ... |
+| 3FFLSCA        |    615,000 | Faro      | Loulé                | São Clemente         | Apartment           | ... |
+| NFOMeFL        |     75,000 | Faro      | Olhão                | Moncarapacho e Fu... | Land                | ... |
+| 4FFPPA         |    350,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFFF(eSPH      |    175,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| 1FFAAeOdÁA     |     17,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFLSGdLA      |    620,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 1FFLSGdLA      |    595,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 1FFLSGdLA      |    600,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| GFFLSCH        |    435,000 | Faro      | Loulé                | São Clemente         | House               | ... |
+| 2FFLSGdLA      |    615,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 3FFPPA         |    159,900 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAAeOdÁH      |    605,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| GFFLQH         |  1,485,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFAAeOdÁS      |    320,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| A1FFLQA        |    185,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| GFFAAeOdÁA     |    340,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFVdBVdBeRH    |    195,000 | Faro      | Vila do Bispo        | Vila do Bispo e R... | House               | ... |
+| 5FFFF(eSPA     |  1,500,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFLQA         |    195,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| A1FFPPA        |    185,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPO-R       |    125,000 | Faro      | Portimão             | Portimão             | Other - Residential | ... |
+| BLFPPG         |     25,000 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFFF(eSPL      | 18,500,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Land                | ... |
+| 1FFLQA         |    360,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 2FFLSGdLA      |    260,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 6FFOOA         |    340,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| NFFF(eSPH      |    235,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| GFFAAeOdÁA     |    335,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NLPPL          |    320,000 | Leiria    | Peniche              | Peniche              | Land                | ... |
+| NFVRdSAVNdCH   |     96,500 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | House               | ... |
+| GFFVRdSAVNdCH  |    325,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | House               | ... |
+| NFFCeEF        |    210,000 | Faro      | Faro                 | Conceição e Estoi    | Farm                | ... |
+| GFFLSGdLA      |    595,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| GFFLSGdLA      |    585,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| GFFLSGdLA      |    565,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 1FFLQA         |    495,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFAAePL        |    100,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| NFPAH          |    420,000 | Faro      | Portimão             | Alvor                | House               | ... |
+| NFAAeOdÁH      |  1,700,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFLSCB         |    469,000 | Faro      | Loulé                | São Clemente         | Building            | ... |
+| 1FFLSSA        |    320,000 | Faro      | Loulé                | São Sebastião        | Apartment           | ... |
+| 2FFLSSA        |    330,000 | Faro      | Loulé                | São Sebastião        | Apartment           | ... |
+| 3FFLSSA        |    340,000 | Faro      | Loulé                | São Sebastião        | Apartment           | ... |
+| NFLBL          |    139,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| GFFFF(eSPA     |    279,900 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFPPS         |    205,000 | Faro      | Portimão             | Portimão             | Store               | ... |
+| 1FFVRdSAVRdSAA |    147,000 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| GFFFF(eSPS     |    150,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Store               | ... |
+| NFL(EePL       |     19,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Land                | ... |
+| 3FFAAeOdÁA     |      8,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |    272,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |    291,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFMH          |  1,290,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFLSGdLL       |    230,000 | Faro      | Lagos                | São Gonçalo de Lagos | Land                | ... |
+| 3FFLQA         |    330,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFLBL          |     95,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| NFSSF          |  1,000,000 | Faro      | Silves               | Silves               | Farm                | ... |
+| NFPPH          |    490,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| 1FFLSGdLA      |    620,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFAAeOdÁH      |    409,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 5FFFF(eSPA     |    805,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFFF(eSPA     |    465,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFLSGdLA      |    595,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 2FFLSGdLA      |    640,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFAAL          |     85,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| NFFF(eSPTol    |     99,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Transfer of lease   | ... |
+| A1FFPPA        |  1,350,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFTT(MeSL      |    890,000 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| NFL(EePH       |  2,600,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | House               | ... |
+| GFFAAeOdÁH     |    560,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 2FFOOA         |    159,900 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| GFFOOA         |    159,900 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 1FFOOA         |    159,900 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| NFPPH          |  1,300,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| NFOOB          |    600,000 | Faro      | Olhão                | Olhão                | Building            | ... |
+| GFFAAeOdÁA     |     14,800 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFLSGdLA      |    615,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| GFFAAeOdÁA     |     87,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 6FFSAdPA       |    209,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 2FFPPA         |    184,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFTT(MeSL      |    120,000 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| NFLSGdLH       |    898,000 | Faro      | Lagos                | São Gonçalo de Lagos | House               | ... |
+| NFSSH          |    305,000 | Faro      | Silves               | Silves               | House               | ... |
+| NFAPL          |    119,900 | Faro      | Albufeira            | Paderne              | Land                | ... |
+| NFVdBVdBeRL    |     45,000 | Faro      | Vila do Bispo        | Vila do Bispo e R... | Land                | ... |
+| NFLAL          |    115,000 | Faro      | Loulé                | Alte                 | Land                | ... |
+| NFLAH          |    540,000 | Faro      | Loulé                | Alte                 | House               | ... |
+| NFLAF          |    540,000 | Faro      | Loulé                | Alte                 | Farm                | ... |
+| NFVdBVdBeRL    |     35,000 | Faro      | Vila do Bispo        | Vila do Bispo e R... | Land                | ... |
+| 5FFFF(eSPA     |    310,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFLBL          |    125,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| NFVRdSAVNdCH   |    135,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | House               | ... |
+| NFTT(MeSL      |     49,900 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| 1FFPPA         |    355,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    355,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    370,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    380,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    350,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    360,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    360,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFVRdSAVRdSAH  |    170,000 | Faro      | Vila Real de Sant... | Vila Real de Sant... | House               | ... |
+| 9FFLQA         |      8,500 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 9FFLQA         |     19,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| GFFLAA         |    499,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 2FFAAeOdÁA     |    249,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFF(eSPF      |    390,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Farm                | ... |
+| NFPPH          |    199,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| NFOQH          |    350,000 | Faro      | Olhão                | Quelfes              | House               | ... |
+| NFOQH          |    280,000 | Faro      | Olhão                | Quelfes              | House               | ... |
+| 3FFLQA         |    473,695 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFCMAS         |    650,000 | Faro      | Castro Marim         | Altura               | Store               | ... |
+| NFAAePH        |    195,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | House               | ... |
+| NFOMeFH        |    875,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| 4FFPPA         |    355,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFOPH          |  1,000,000 | Faro      | Olhão                | Pechão               | House               | ... |
+| NFL(EePH       |    800,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | House               | ... |
+| 3FFLSGdLA      |    860,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFSAdPL        |  1,300,000 | Faro      | Silves               | Armação de Pêra      | Land                | ... |
+| GFPPAFdDeNA    |  1,580,000 | Porto     | Porto                | Aldoar, Foz do Do... | Apartment           | ... |
+| 4FFFF(eSPA     |    265,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFLQA         |    269,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFL(EePH       |    115,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | House               | ... |
+| 2FFPAA         |    275,000 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| 2FFAOA         |    260,000 | Faro      | Aljezur              | Odeceixe             | Apartment           | ... |
+| 7FFLQA         |     20,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 4FFAAeOdÁA     |      6,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 5FFPPA         |    375,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    360,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAAeOdÁH      |  1,500,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 5FFPPA         |    154,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    223,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAAL          |     75,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| NFPPG          |     17,500 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| GFFVdBSA       |    216,000 | Faro      | Vila do Bispo        | Sagres               | Apartment           | ... |
+| 5FFPPA         |    170,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPAA         |    180,000 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| 8FFPPA         |    205,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAAL          |    100,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| NFSAdPL        |    850,000 | Faro      | Silves               | Armação de Pêra      | Land                | ... |
+| 1FFL(LeCA      |    232,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| NFSSH          |    220,000 | Faro      | Silves               | Silves               | House               | ... |
+| NFLSGdLH       |  4,295,000 | Faro      | Lagos                | São Gonçalo de Lagos | House               | ... |
+| 5FFFF(eSPA     |    371,500 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFPAH          |  1,400,000 | Faro      | Portimão             | Alvor                | House               | ... |
+| GFFFCeEL       |    349,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| BLFAAeOdÁA     |    160,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFL(FL         |  1,350,000 | Faro      | Lagoa (Algarve)      | Ferragudo            | Land                | ... |
+| 5FFTT(MeSA     |    259,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| NFLSGdLH       |    395,000 | Faro      | Lagos                | São Gonçalo de Lagos | House               | ... |
+| GFFFML         |    255,000 | Faro      | Faro                 | Montenegro           | Land                | ... |
+| 1FFPAA         |    365,000 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| NFPAH          |    800,000 | Faro      | Portimão             | Alvor                | House               | ... |
+| NFMML          |    140,000 | Faro      | Monchique            | Monchique            | Land                | ... |
+| 1FFAAeOdÁA     |     37,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFSAdPH        |    660,000 | Faro      | Silves               | Armação de Pêra      | House               | ... |
+| 2FFAAeOdÁA     |    215,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      6,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFSAdPH        |    680,000 | Faro      | Silves               | Armação de Pêra      | House               | ... |
+| GFFLLA         |    360,000 | Faro      | Lagos                | Luz                  | Apartment           | ... |
+| 1FFAAeOdÁA     |      4,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAAeOdÁO-R    |      3,100 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| NFL(EePH       |    380,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | House               | ... |
+| NFSSH          |    235,000 | Faro      | Silves               | Silves               | House               | ... |
+| 2FFAAeOdÁO-R   |     25,500 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| NFAFH          |    400,000 | Faro      | Albufeira            | Ferreiras            | House               | ... |
+| GFFLQH         |    650,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| 3FFOOA         |    122,500 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| GFFPMGF        |  2,499,999 | Faro      | Portimão             | Mexilhoeira Grande   | Farm                | ... |
+| 2FFTCeCdTA     |    199,000 | Faro      | Tavira               | Conceição e Caban... | Apartment           | ... |
+| NFOMeFH        |  1,750,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| 8FFL(LeCA      |    255,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| NFTT(MeSH      |    249,500 | Faro      | Tavira               | Tavira (Santa Mar... | House               | ... |
+| 4FFAAeOdÁA     |    150,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFLQA         |    220,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 3FFPPA         |    237,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFLSCL         |     36,000 | Faro      | Loulé                | São Clemente         | Land                | ... |
+| NFOPL          |     56,250 | Faro      | Olhão                | Pechão               | Land                | ... |
+| 2FFOOA         |    370,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 3FFAAeOdÁA     |    267,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFPAA         |    189,000 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| NFPPH          |    995,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| GFFLQA         |    330,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSSBdMH       |    125,000 | Faro      | Silves               | São Bartolomeu de... | House               | ... |
+| 5FFLQA         |    230,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| GFFAAePH       |     32,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | House               | ... |
+| NFLQH          |  3,300,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFAAeOdÁH      |  1,900,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFAAeOdÁS      |    111,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁS      |     95,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁS      |     85,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁS      |    100,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁS      |     85,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| GFFAAeOdÁS     |    430,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| 1FFPPA         |     13,750 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    350,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    365,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFTCeCdTA     |    242,000 | Faro      | Tavira               | Conceição e Caban... | Apartment           | ... |
+| 4FFAAeOdÁA     |    220,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLAF          |    900,000 | Faro      | Loulé                | Almancil             | Farm                | ... |
+| NFAAeOdÁH      |    450,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 7FFSAdPA       |    189,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFFF(eSPA     |    380,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFFF(eSPA     |    425,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFAAeOdÁH      |  1,650,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFAAeOdÁH      |  1,850,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 2FFLSGdLA      |    635,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| GFFOMeFA       |    285,000 | Faro      | Olhão                | Moncarapacho e Fu... | Apartment           | ... |
+| GFFOOH         |    214,500 | Faro      | Olhão                | Olhão                | House               | ... |
+| GFFOMeFA       |    285,000 | Faro      | Olhão                | Moncarapacho e Fu... | Apartment           | ... |
+| NFOOH          |    135,000 | Faro      | Olhão                | Olhão                | House               | ... |
+| NFSSH          |    795,000 | Faro      | Silves               | Silves               | House               | ... |
+| GFFFF(eSPA     |    325,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFLQH          |    569,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| GFFFF(eSPA     |    255,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFFF(eSPA     |    229,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFFF(eSPA     |    255,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFFF(eSPA     |    305,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFFF(eSPA     |    258,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFFF(eSPA     |    252,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFFF(eSPA     |    265,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFFF(eSPA     |    316,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFFF(eSPA     |    268,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFFF(eSPA     |    262,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    276,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    326,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    279,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    272,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFAAeOdÁH      |    540,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFOQL          |    750,000 | Faro      | Olhão                | Quelfes              | Land                | ... |
+| 2FFTT(MeSA     |    364,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| GFFSAdPA       |    730,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 2FFVRdSAVRdSAA |    220,000 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| NFFML          |    180,000 | Faro      | Faro                 | Montenegro           | Land                | ... |
+| GFFFF(eSPO-C   |    140,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Other - Commercial  | ... |
+| NFOQH          |    350,000 | Faro      | Olhão                | Quelfes              | House               | ... |
+| NFTT(MeSG      |     37,000 | Faro      | Tavira               | Tavira (Santa Mar... | Garage              | ... |
+| 2FFVRdSAVRdSAA |    188,500 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| 2FFAAeOdÁA     |    285,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFAAeOdÁA     |  1,299,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFL(PL         |    350,000 | Faro      | Lagoa (Algarve)      | Porches              | Land                | ... |
+| NFL(PF         |  1,300,000 | Faro      | Lagoa (Algarve)      | Porches              | Farm                | ... |
+| NFAAeOdÁS      |    111,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| 9FFPPA         |    229,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFOOA         |    360,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| NFLSGdLW       |  2,035,000 | Faro      | Lagos                | São Gonçalo de Lagos | Warehouse           | ... |
+| 3FFLQA         |    650,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFLSSL         |     80,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| 2FFL(LeCA      |    199,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| NFSBdASBdAH    |    750,000 | Faro      | São Brás de Alportel | São Brás de Alportel | House               | ... |
+| NFPAS          |    750,000 | Faro      | Portimão             | Alvor                | Store               | ... |
+| NFL(LeCH       |    590,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| NFAAeOdÁS      |    200,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁH      |  1,500,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFAAeOdÁS      |    107,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| 1FFAAeOdÁA     |     10,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |    416,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFAAeOdÁA     |    677,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFAAeOdÁA     |    595,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFCeEL        |     89,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| NFLLH          |    980,000 | Faro      | Lagos                | Luz                  | House               | ... |
+| NFSBdASBdAL    |     49,500 | Faro      | São Brás de Alportel | São Brás de Alportel | Land                | ... |
+| 1FFLQA         |    498,750 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSSBdML       |     20,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| 9FFPPA         |    125,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPS         |    310,000 | Faro      | Portimão             | Portimão             | Store               | ... |
+| GFFPPD         |    246,000 | Faro      | Portimão             | Portimão             | Duplex              | ... |
+| GFFPPA         |    240,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    330,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    340,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    365,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    320,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFAAeOdÁA     |    553,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFAAeOdÁA     |    426,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |    424,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFAAeOdÁA     |    436,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFAAeOdÁA     |      2,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFAAeOdÁA     |      8,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFAAeOdÁA     |      2,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLQTeBL       |    380,000 | Faro      | Loulé                | Querença, Tôr e B... | Land                | ... |
+| NFAAePH        |    135,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | House               | ... |
+| NFAAePL        |     12,500 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| NFVdBSH        |    750,000 | Faro      | Vila do Bispo        | Sagres               | House               | ... |
+| NFAAePL        |     15,400 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| NFAAePL        |     16,900 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| NFAAePL        |     44,800 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| 2FFOOA         |    799,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 2FFTT(MeSA     |    165,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| 7FFLQA         |    650,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFLQH          |    850,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFOMeFL        |     24,000 | Faro      | Olhão                | Moncarapacho e Fu... | Land                | ... |
+| 3FFAAeOdÁA     |    655,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAAePL        |     35,900 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| GFFAAeOdÁA     |    419,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFPPA         |    280,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFLQH         |  3,550,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| 4FFOQA         |    380,000 | Faro      | Olhão                | Quelfes              | Apartment           | ... |
+| 2FFPPA         |    280,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFLQA         |    770,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 3FFLQA         |    905,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSBdASBdAL    |    150,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Land                | ... |
+| NFSBdASBdAL    |    160,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Land                | ... |
+| 5FFPPA         |    425,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    300,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    390,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    325,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFAAeOdÁA     |    229,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAAeOdÁH      |    900,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFFSBdNL       |     29,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| 3FFTT(MeSA     |    169,250 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| NFAAeOdÁS      |    125,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁS      |    100,000 | Faro      | Albufeira            | Albufeira e Olhos... | Store               | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    280,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| 1FFPPA         |    350,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAAeOdÁL      |    280,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| GFFFCeEH       |    240,000 | Faro      | Faro                 | Conceição e Estoi    | House               | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| 4FFPPA         |    270,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFCMAH         |     65,000 | Faro      | Castro Marim         | Azinhal              | House               | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| 3FFPPA         |    360,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    285,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFFCeEL        |    185,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| 2FFLQA         |     10,500 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFAAeOdÁL      |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    260,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| NFAAeOdÁL      |    260,000 | Faro      | Albufeira            | Albufeira e Olhos... | Land                | ... |
+| 6FFPPA         |    340,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFFML          |  1,290,000 | Faro      | Faro                 | Montenegro           | Land                | ... |
+| 1FFLSGdLA      |    305,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFSBdASBdAL    |     74,150 | Faro      | São Brás de Alportel | São Brás de Alportel | Land                | ... |
+| 2FFFF(eSPA     |    699,600 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFFF(eSPA     |    583,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    620,100 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    424,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFMMF          |    170,000 | Faro      | Monchique            | Monchique            | Farm                | ... |
+| NFCMAL         |     45,000 | Faro      | Castro Marim         | Azinhal              | Land                | ... |
+| NFCMAL         |     35,000 | Faro      | Castro Marim         | Azinhal              | Land                | ... |
+| NFOOH          |    465,000 | Faro      | Olhão                | Olhão                | House               | ... |
+| 4FFFF(eSPA     |    630,700 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 4FFFF(eSPA     |    434,600 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 5FFFF(eSPA     |    445,200 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 5FFFF(eSPA     |    445,200 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 5FFFF(eSPA     |    609,500 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    455,800 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    620,100 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 7FFFF(eSPA     |  1,081,200 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 7FFFF(eSPA     |  1,028,200 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFAAePL        |     34,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | Land                | ... |
+| 2FFFF(eSPA     |    418,700 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFLAA         |    285,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 1FFFF(eSPA     |    413,400 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFAAeOdÁA     |    235,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFLQA         |    650,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSSMdSL       |     35,000 | Faro      | Silves               | São Marcos da Serra  | Land                | ... |
+| NFSSMdSL       |     36,000 | Faro      | Silves               | São Marcos da Serra  | Land                | ... |
+| NFSSMdSL       |     28,000 | Faro      | Silves               | São Marcos da Serra  | Land                | ... |
+| 1FFLQA         |      8,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 1FFLQA         |    265,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 1FFPPA         |    338,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPA         |    262,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPA         |    352,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    362,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    367,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    372,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFCMAL         |    240,000 | Faro      | Castro Marim         | Azinhal              | Land                | ... |
+| 5FFPPA         |    287,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    377,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    382,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 7FFPPA         |    297,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFAAeOdÁA     |    195,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFFF(eSPS     |  1,802,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Store               | ... |
+| 1FFFF(eSPA     |    609,500 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFLAA         |    335,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| GFFLAA         |    295,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 1FFLAA         |    395,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| NFPPH          |    895,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| NFSSMdSL       |    400,000 | Faro      | Silves               | São Marcos da Serra  | Land                | ... |
+| 3FFAAeOdÁA     |    500,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLOH          |    387,000 | Faro      | Lagos                | Odiáxere             | House               | ... |
+| NFVdBBL        |  1,000,000 | Faro      | Vila do Bispo        | Budens               | Land                | ... |
+| 6FFLQA         |      6,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFFSBdNH       |    180,000 | Faro      | Faro                 | Santa Bárbara de ... | House               | ... |
+| NFLSCH         |    775,000 | Faro      | Loulé                | São Clemente         | House               | ... |
+| 1FFAAeOdÁA     |    230,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAFH          |    340,000 | Faro      | Albufeira            | Ferreiras            | House               | ... |
+| NFLSCL         |    525,000 | Faro      | Loulé                | São Clemente         | Land                | ... |
+| 1FFPPA         |    225,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFVRdSAVNdCL   |     98,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | Land                | ... |
+| NFLQH          |  2,350,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| 4FFAAeOdÁA     |      3,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFTT(MeSL      |    115,000 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| 2FFL(EePA      |    355,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Apartment           | ... |
+| NFLSSL         |    150,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| 7FFPPA         |    387,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    292,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    382,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFLAA         |    395,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 1FFLAA         |    350,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 2FFLAA         |    420,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 2FFLAD         |    450,000 | Faro      | Loulé                | Almancil             | Duplex              | ... |
+| 2FFLAD         |    395,000 | Faro      | Loulé                | Almancil             | Duplex              | ... |
+| 3FFLAA         |    550,000 | Faro      | Loulé                | Almancil             | Apartment           | ... |
+| 2FFAAeOdÁA     |    199,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFPAA         |    157,000 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| 2FFPAA         |    161,500 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| GFFLQA         |    680,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSSBdML       |     24,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| GFFAAeOdÁA     |      4,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFAAeOdÁA     |      2,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFAAeOdÁA     |     13,400 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFL(EePL       |     90,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Land                | ... |
+| NFL(EePL       |     75,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Land                | ... |
+| GFFPPA         |    242,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    357,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    362,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFSAdPA       |    185,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| GFFLQA         |    655,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 4FFSAdPA       |    205,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFPPA         |    229,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFCMCML        |    173,500 | Faro      | Castro Marim         | Castro Marim         | Land                | ... |
+| NFLAL          |    110,000 | Faro      | Loulé                | Alte                 | Land                | ... |
+| GFFLSCH        |    579,000 | Faro      | Loulé                | São Clemente         | House               | ... |
+| NFPPL          |     60,000 | Faro      | Portimão             | Portimão             | Land                | ... |
+| NFMML          |    150,000 | Faro      | Monchique            | Monchique            | Land                | ... |
+| NFLAL          |     50,000 | Faro      | Loulé                | Alte                 | Land                | ... |
+| GFFAAeOdÁO-R   |     10,000 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 2FFAAeOdÁO-R   |      2,000 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 2FFAAeOdÁO-R   |      2,000 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 3FFAAeOdÁO-R   |      2,000 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 5FFLQA         |    297,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 5FFLQA         |    279,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFAAL          |    155,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| NFCMAL         |     32,500 | Faro      | Castro Marim         | Azinhal              | Land                | ... |
+| NFPPH          |    495,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| 3FFFMA         |    560,000 | Faro      | Faro                 | Montenegro           | Apartment           | ... |
+| 1FFFMA         |    425,000 | Faro      | Faro                 | Montenegro           | Apartment           | ... |
+| GFFTSCFBH      |    400,000 | Faro      | Tavira               | Santa Catarina Fo... | House               | ... |
+| GFFLQH         |    950,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| GFFVdBBTol     |    245,000 | Faro      | Vila do Bispo        | Budens               | Transfer of lease   | ... |
+| NFAPL          |     49,000 | Faro      | Albufeira            | Paderne              | Land                | ... |
+| NFAPL          |     35,000 | Faro      | Albufeira            | Paderne              | Land                | ... |
+| NFAPL          |     49,000 | Faro      | Albufeira            | Paderne              | Land                | ... |
+| NFAPW          |    150,000 | Faro      | Albufeira            | Paderne              | Warehouse           | ... |
+| NFAPH          |    199,000 | Faro      | Albufeira            | Paderne              | House               | ... |
+| 3FFAAeOdÁA     |     11,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAGH          |  2,972,000 | Faro      | Albufeira            | Guia                 | House               | ... |
+| NFTT(MeSL      |     26,900 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| 1FFAAeOdÁA     |      7,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFAAeOdÁA     |     18,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFMML          |     25,000 | Faro      | Monchique            | Monchique            | Land                | ... |
+| GFFAAeOdÁA     |    260,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 4FFAAeOdÁA     |    155,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 5FFAAeOdÁA     |    396,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLBL          |     30,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| NFLQH          |    760,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| 2FFFMA         |    422,500 | Faro      | Faro                 | Montenegro           | Apartment           | ... |
+| NFLAL          |  1,100,000 | Faro      | Loulé                | Almancil             | Land                | ... |
+| 4FFAAeOdÁA     |      2,600 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFF(eSPS      |    330,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Store               | ... |
+| NFL(PF         |    350,000 | Faro      | Lagoa (Algarve)      | Porches              | Farm                | ... |
+| 1FFFF(eSPA     |    694,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFFF(eSPA     |    577,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    614,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFFF(eSPA     |    418,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    424,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    588,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 4FFFF(eSPA     |    434,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFFF(eSPA     |    434,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 4FFFF(eSPA     |    598,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 5FFFF(eSPA     |    641,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 5FFFF(eSPA     |    445,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 5FFFF(eSPA     |    445,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    651,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    455,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    455,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 7FFFF(eSPA     |  1,028,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 7FFFF(eSPA     |  1,060,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFLBeBdSJL     |     76,000 | Faro      | Lagos                | Bensafrim e Barão... | Land                | ... |
+| 1FFFF(eSPA     |    413,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFSSBdML       |     15,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| NFSSBdML       |     30,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| NFSSBdML       |     50,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| NFVdBBL        |     50,000 | Faro      | Vila do Bispo        | Budens               | Land                | ... |
+| NFSAeTL        |     49,650 | Faro      | Silves               | Algoz e Tunes        | Land                | ... |
+| NFSAeTL        |    107,450 | Faro      | Silves               | Algoz e Tunes        | Land                | ... |
+| 4FFLQA         |    475,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| TFFLQH         |  1,125,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| 9FFPPA         |    245,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPAH         |    460,000 | Faro      | Portimão             | Alvor                | House               | ... |
+| DFSBdASBdAA    |    480,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Apartment           | ... |
+| NFTLdTeSEH     |    699,000 | Faro      | Tavira               | Luz de Tavira e S... | House               | ... |
+| NFFMH          |  1,390,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  2,690,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  1,720,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  2,090,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  2,190,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  1,670,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  2,190,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFFMH          |  1,440,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| NFPPH          |    517,500 | Faro      | Portimão             | Portimão             | House               | ... |
+| NFCMCML        |    140,000 | Faro      | Castro Marim         | Castro Marim         | Land                | ... |
+| GFFLQH         |    715,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFSSBdML       |     17,500 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| BLFAAeOdÁA     |    235,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFSAdPA       |    325,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFAGA         |    348,000 | Faro      | Albufeira            | Guia                 | Apartment           | ... |
+| 1FFAAeOdÁO-R   |     10,400 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| NFTLdTeSEL     |    150,000 | Faro      | Tavira               | Luz de Tavira e S... | Land                | ... |
+| NFMMH          |     65,000 | Faro      | Monchique            | Monchique            | House               | ... |
+| NFL(LeCL       |     55,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Land                | ... |
+| 1FFAAeOdÁA     |    216,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLAL          |    148,000 | Faro      | Loulé                | Almancil             | Land                | ... |
+| NFTT(MeSL      |     98,000 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| GFFLSGdLS      |    480,000 | Faro      | Lagos                | São Gonçalo de Lagos | Store               | ... |
+| GFFSAePH       |    790,000 | Faro      | Silves               | Alcantarilha e Pêra  | House               | ... |
+| GFFPPA         |    648,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| NFSSBdMH       |    495,000 | Faro      | Silves               | São Bartolomeu de... | House               | ... |
+| 1FFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| GFFFF(eSPA     |    385,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| 1FFFF(eSPA     |    362,500 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFAAeOdÁH     |    400,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 3FFOQA         |    162,500 | Faro      | Olhão                | Quelfes              | Apartment           | ... |
+| 3FFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| NFSSMdSF       |    180,000 | Faro      | Silves               | São Marcos da Serra  | Farm                | ... |
+| NFLSCL         |     30,000 | Faro      | Loulé                | São Clemente         | Land                | ... |
+| 1FFAAeOdÁA     |      1,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      4,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      4,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      1,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      3,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFAAeOdÁA     |    220,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFSBdNL       |    180,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| 1FFAAeOdÁA     |      7,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFLSGdLA      |    213,750 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFCMAH         |    340,000 | Faro      | Castro Marim         | Altura               | House               | ... |
+| NFLSGdLH       |    950,000 | Faro      | Lagos                | São Gonçalo de Lagos | House               | ... |
+| 1FFAAeOdÁA     |    340,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLAL          |    395,000 | Faro      | Loulé                | Almancil             | Land                | ... |
+| NFFSBdNL       |     65,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| NFAAL          |    495,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| NFLBL          |     42,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| NFAAePH        |  1,400,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | House               | ... |
+| NFLSCL         |    200,000 | Faro      | Loulé                | São Clemente         | Land                | ... |
+| 3FFFF(eSPA     |    550,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 4FFFF(eSPA     |    441,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| NFPMGH         |    750,000 | Faro      | Portimão             | Mexilhoeira Grande   | House               | ... |
+| DFSAdPH        |    980,000 | Faro      | Silves               | Armação de Pêra      | House               | ... |
+| 2FFPPA         |    414,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    389,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFAAeOdÁA     |    315,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLAH          |    547,000 | Faro      | Loulé                | Ameixial             | House               | ... |
+| NFLSSL         |     60,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| NFLSSL         |     55,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| NFCMCML        |    149,000 | Faro      | Castro Marim         | Castro Marim         | Land                | ... |
+| NFL(FF         |    299,000 | Faro      | Lagoa (Algarve)      | Ferragudo            | Farm                | ... |
+| NFOOL          |    350,000 | Faro      | Olhão                | Olhão                | Land                | ... |
+| 1FFAAeOdÁO-R   |      2,000 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 1FFAAeOdÁO-R   |      2,800 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 2FFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| 4FFFF(eSPA     |    436,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFAAeOdÁI     |    185,000 | Faro      | Albufeira            | Albufeira e Olhos... | Investment          | ... |
+| 5FFFF(eSPA     |    605,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    795,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    415,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 6FFFF(eSPA     |    587,500 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 2FFPPA         |    379,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    384,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFAAeOdÁA     |     18,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFPPA         |    374,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAPL          |    285,000 | Faro      | Albufeira            | Paderne              | Land                | ... |
+| 2FFPPA         |    389,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFPAH          |    460,750 | Faro      | Portimão             | Alvor                | House               | ... |
+| NFOPO-R        |    225,000 | Faro      | Olhão                | Pechão               | Other - Residential | ... |
+| 1FFPPA         |    409,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    384,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFTT(MeSL      |    750,000 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| 2FFAAeOdÁA     |    220,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFF(eSPH      |    350,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| 3FFAAeOdÁA     |      8,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFPPA         |    240,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFSSBdMH       |     85,000 | Faro      | Silves               | São Bartolomeu de... | House               | ... |
+| 1FFSAePA       |    295,000 | Faro      | Silves               | Alcantarilha e Pêra  | Apartment           | ... |
+| GFFSAdPA       |    217,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 3FFAAeOdÁA     |     10,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 3FFAAeOdÁA     |      5,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAAePH        |     52,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | House               | ... |
+| NFSSBdMH       |    230,000 | Faro      | Silves               | São Bartolomeu de... | House               | ... |
+| NFLAL          |    900,000 | Faro      | Loulé                | Almancil             | Land                | ... |
+| 1FFPPA         |    238,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFFML          |    199,000 | Faro      | Faro                 | Montenegro           | Land                | ... |
+| GFFPPA         |    500,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    367,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFAAeOdÁH      |  1,500,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 1FFAAeOdÁO-R   |      2,500 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 2FFAAeOdÁA     |      5,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFAAeOdÁA     |      6,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFAAeOdÁO-R   |      2,500 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| NFLBL          |    105,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| 2FFPPA         |    225,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFL(PF         |    995,000 | Faro      | Lagoa (Algarve)      | Porches              | Farm                | ... |
+| 2FFPPA         |    189,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFSBdASBdAH    |     70,000 | Faro      | São Brás de Alportel | São Brás de Alportel | House               | ... |
+| 1FFFF(eSPA     |    460,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFAAeOdÁA     |     17,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFVdBVdBeRL    |  1,025,000 | Faro      | Vila do Bispo        | Vila do Bispo e R... | Land                | ... |
+| NFFF(eSPS      |     99,900 | Faro      | Faro                 | Faro (Sé e São Pe... | Store               | ... |
+| NFTLdTeSEF     |    950,000 | Faro      | Tavira               | Luz de Tavira e S... | Farm                | ... |
+| NFLSSL         |     40,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| NFAGF          |  1,175,000 | Faro      | Albufeira            | Guia                 | Farm                | ... |
+| NFAAeOdÁH      |    450,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 4FFAAeOdÁA     |      3,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLQL          |    130,000 | Faro      | Loulé                | Quarteira            | Land                | ... |
+| NFCMCMH        |     50,000 | Faro      | Castro Marim         | Castro Marim         | House               | ... |
+| NFAAL          |     65,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| NFSSBdML       |    180,980 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| 3FFAAeOdÁA     |    285,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFCeEL        |     44,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| NFSSBdML       |     20,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| NFAFH          |    435,000 | Faro      | Albufeira            | Ferreiras            | House               | ... |
+| NFOMeFH        |    270,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| 1FFLSGdLA      |    610,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFAMLL         |      7,500 | Faro      | Alcoutim             | Martim Longo         | Land                | ... |
+| GFFSAdPS       |    210,000 | Faro      | Silves               | Armação de Pêra      | Store               | ... |
+| NFAAH          |    995,000 | Faro      | Aljezur              | Aljezur              | House               | ... |
+| GFFLQH         |    795,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFAAeOdÁB      |  1,700,000 | Faro      | Albufeira            | Albufeira e Olhos... | Building            | ... |
+| NFAAeOdÁH      |    950,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFPPH          |    695,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| 3FFCMAA        |    280,000 | Faro      | Castro Marim         | Altura               | Apartment           | ... |
+| NFFSBdNF       |    180,000 | Faro      | Faro                 | Santa Bárbara de ... | Farm                | ... |
+| NFVRdSAMGH     |    695,000 | Faro      | Vila Real de Sant... | Monte Gordo          | House               | ... |
+| GFFAAeOdÁA     |      3,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFL(LeCF       |    750,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Farm                | ... |
+| NFLSSS         |    350,000 | Faro      | Loulé                | São Sebastião        | Store               | ... |
+| NFSBdASBdAL    |     70,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Land                | ... |
+| NFSBdASBdAL    |     20,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Land                | ... |
+| GFFPPL         |  1,000,000 | Faro      | Portimão             | Portimão             | Land                | ... |
+| 1FFOOA         |    690,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 1FFL(EePA      |    197,500 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Apartment           | ... |
+| NFLBH          |    295,000 | Faro      | Loulé                | Boliqueime           | House               | ... |
+| GFFSSBdMF      |    109,000 | Faro      | Silves               | São Bartolomeu de... | Farm                | ... |
+| NFAMLL         |    650,000 | Faro      | Alcoutim             | Martim Longo         | Land                | ... |
+| NFAMLL         |    325,000 | Faro      | Alcoutim             | Martim Longo         | Land                | ... |
+| NFSSMdSH       |     35,000 | Faro      | Silves               | São Marcos da Serra  | House               | ... |
+| NFTT(MeSL      |  5,000,000 | Faro      | Tavira               | Tavira (Santa Mar... | Land                | ... |
+| 3FFOQA         |    265,000 | Faro      | Olhão                | Quelfes              | Apartment           | ... |
+| NFAMLL         |      6,000 | Faro      | Alcoutim             | Martim Longo         | Land                | ... |
+| NFAMLL         |     12,000 | Faro      | Alcoutim             | Martim Longo         | Land                | ... |
+| 1FFAAeOdÁA     |    158,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFAAF          |    252,000 | Faro      | Aljezur              | Aljezur              | Farm                | ... |
+| GFFLSSL        |    190,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| NFAAePH        |    134,000 | Faro      | Alcoutim             | Alcoutim e Pereiro   | House               | ... |
+| NFPAB          |    460,750 | Faro      | Portimão             | Alvor                | Building            | ... |
+| 1FFFF(eSPA     |    270,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFPPG          |     15,480 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFPPG          |     25,200 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFPPG          |     16,910 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFPPG          |     15,350 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFPPG          |     24,736 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFPPG          |     80,000 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| NFPPG          |     16,240 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| DFPAH          |  3,500,000 | Faro      | Portimão             | Alvor                | House               | ... |
+| NFTT(MeSH      |    750,000 | Faro      | Tavira               | Tavira (Santa Mar... | House               | ... |
+| NFPPG          |     16,340 | Faro      | Portimão             | Portimão             | Garage              | ... |
+| GFFTCeCdTA     |    249,950 | Faro      | Tavira               | Conceição e Caban... | Apartment           | ... |
+| NFL(FL         |    192,500 | Faro      | Lagoa (Algarve)      | Ferragudo            | Land                | ... |
+| 1FFLQA         |    490,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFFSBdNL       |    165,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| GFFFMA         |    450,000 | Faro      | Faro                 | Montenegro           | Apartment           | ... |
+| NFLAH          |  2,800,000 | Faro      | Loulé                | Almancil             | House               | ... |
+| 2FFLQA         |    284,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFOMeFL        |    160,000 | Faro      | Olhão                | Moncarapacho e Fu... | Land                | ... |
+| NFSSBdMF       |    300,000 | Faro      | Silves               | São Bartolomeu de... | Farm                | ... |
+| NFL(LeCH       |    245,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| NFL(LeCH       |    720,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| 1FLSAMA        |    200,000 | Lisboa    | Sintra               | Algueirão-Mem Mar... | Apartment           | ... |
+| 1FFFF(eSPA     |    380,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFLQA         |    279,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 4FFOQA         |    270,000 | Faro      | Olhão                | Quelfes              | Apartment           | ... |
+| NFCMAH         |    735,000 | Faro      | Castro Marim         | Altura               | House               | ... |
+| GFFLQA         |    465,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFLAH          |  1,150,000 | Faro      | Loulé                | Almancil             | House               | ... |
+| 1FFAAeOdÁA     |     12,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFPAL          |    450,000 | Faro      | Portimão             | Alvor                | Land                | ... |
+| 5FFAAeOdÁA     |    250,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFFF(eSPH      |    650,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| DFLQA          |    190,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFCMCMH        |  1,280,000 | Faro      | Castro Marim         | Castro Marim         | House               | ... |
+| 2FFL(EePA      |    254,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Apartment           | ... |
+| GFFLQA         |    220,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFTCeCdTL      |     85,000 | Faro      | Tavira               | Conceição e Caban... | Land                | ... |
+| 7FFPPA         |    297,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 7FFPPA         |    367,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFVdBBH        |    400,000 | Faro      | Vila do Bispo        | Budens               | House               | ... |
+| NFAGH          |    487,000 | Faro      | Albufeira            | Guia                 | House               | ... |
+| NFL(LeCL       |     89,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Land                | ... |
+| 7FFPPA         |    450,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFAAeOdÁA     |      1,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      1,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      1,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      2,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFL(LeCA      |    184,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| 1FFAAeOdÁA     |      1,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      1,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFSAeTA       |    249,000 | Faro      | Silves               | Algoz e Tunes        | Apartment           | ... |
+| NFSBdASBdAF    |    650,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Farm                | ... |
+| NFPPL          |    530,000 | Faro      | Portimão             | Portimão             | Land                | ... |
+| NFL(EePH       |    220,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | House               | ... |
+| NFLSSL         |     35,000 | Faro      | Loulé                | São Sebastião        | Land                | ... |
+| 1FFPAA         |    415,000 | Faro      | Portimão             | Alvor                | Apartment           | ... |
+| 1FFLSGdLA      |    217,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| GFFL(PG        |     19,900 | Faro      | Lagoa (Algarve)      | Porches              | Garage              | ... |
+| 3FFL(PA        |    975,000 | Faro      | Lagoa (Algarve)      | Porches              | Apartment           | ... |
+| 6FFPPA         |    250,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFOMeFF        |  5,000,000 | Faro      | Olhão                | Moncarapacho e Fu... | Farm                | ... |
+| GFFOOA         |    350,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| GFFOOA         |    350,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 2FFL(EePA      |    220,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Apartment           | ... |
+| 3FFTT(MeSA     |    200,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| NFLAL          |  2,000,000 | Faro      | Loulé                | Almancil             | Land                | ... |
+| 1FFPPH         |    370,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| GFFL(LeCA      |    315,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| 1FFLQA         |    489,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSAePH        |  1,250,000 | Faro      | Silves               | Alcantarilha e Pêra  | House               | ... |
+| NFCMCMH        |    765,000 | Faro      | Castro Marim         | Castro Marim         | House               | ... |
+| GFFLQA         |    175,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 1FFSAeTA       |    229,000 | Faro      | Silves               | Algoz e Tunes        | Apartment           | ... |
+| NFTT(MeSH      |    590,000 | Faro      | Tavira               | Tavira (Santa Mar... | House               | ... |
+| NFTT(MeSH      |    590,000 | Faro      | Tavira               | Tavira (Santa Mar... | House               | ... |
+| 1FFFF(eSPA     |    280,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFAAeOdÁA     |    275,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 4FFLQA         |    179,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFCMAL         | 11,000,000 | Faro      | Castro Marim         | Altura               | Land                | ... |
+| NFSBdASBdAH    |    535,000 | Faro      | São Brás de Alportel | São Brás de Alportel | House               | ... |
+| NFAAeOdÁH      |  1,299,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 1FFOOA         |    330,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 1FFOOA         |    410,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| 3FFL(LeCA      |    235,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| 2FFFMA         |    308,000 | Faro      | Faro                 | Montenegro           | Apartment           | ... |
+| 2FFAAeOdÁA     |    199,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFPPS          |    125,000 | Faro      | Portimão             | Portimão             | Store               | ... |
+| NFPPS          |     55,000 | Faro      | Portimão             | Portimão             | Store               | ... |
+| GFFSAeTH       |  2,090,000 | Faro      | Silves               | Algoz e Tunes        | House               | ... |
+| NFPPH          |    195,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| NFCMCML        |    100,000 | Faro      | Castro Marim         | Castro Marim         | Land                | ... |
+| NFVRdSAVNdCO-R |  1,990,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | Other - Residential | ... |
+| NFL(LeCH       |    575,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| NFFMS          |    275,000 | Faro      | Faro                 | Montenegro           | Store               | ... |
+| 2FFVRdSAVNdCA  |    220,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | Apartment           | ... |
+| NFAAeOdÁH      |    645,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFAAeOdÁG      |     12,500 | Faro      | Albufeira            | Albufeira e Olhos... | Garage              | ... |
+| 6FFPPA         |    362,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    292,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    357,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFOMeFH        |    130,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| 4FFPPA         |    380,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFSSBdMB       |  1,600,000 | Faro      | Silves               | São Bartolomeu de... | Building            | ... |
+| NFFCeEL        |     67,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| NFAAH          |    540,000 | Faro      | Aljezur              | Aljezur              | House               | ... |
+| NFLSCH         |    998,500 | Faro      | Loulé                | São Clemente         | House               | ... |
+| 2FFLSGdLA      |    347,500 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| NFFCeEL        |     60,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| NFFSBdNL       |    395,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| NFSSBdML       |  1,600,000 | Faro      | Silves               | São Bartolomeu de... | Land                | ... |
+| NFFSBdNL       |     30,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| NFL(EePW       |    710,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Warehouse           | ... |
+| GFFSAdPA       |    198,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 6FFLQA         |    260,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFTT(MeSH      |    699,000 | Faro      | Tavira               | Tavira (Santa Mar... | House               | ... |
+| NFFCeEL        |     35,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| 4FFPPA         |    146,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFOMeFH        |    830,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| NFFML          |    215,000 | Faro      | Faro                 | Montenegro           | Land                | ... |
+| NFAMLH         |     76,000 | Faro      | Alcoutim             | Martim Longo         | House               | ... |
+| 1FFOMeFA       |    165,000 | Faro      | Olhão                | Moncarapacho e Fu... | Apartment           | ... |
+| NFFML          |    235,000 | Faro      | Faro                 | Montenegro           | Land                | ... |
+| 2FFPPA         |    290,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    375,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    295,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    380,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFL(LeCH       |    296,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| 2FFOOA         |    305,000 | Faro      | Olhão                | Olhão                | Apartment           | ... |
+| GFFPPS         |    440,000 | Faro      | Portimão             | Portimão             | Store               | ... |
+| GFFL(EePS      |    385,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Store               | ... |
+| NFLSGdLH       |  1,980,000 | Faro      | Lagos                | São Gonçalo de Lagos | House               | ... |
+| NFAAH          |  1,000,000 | Faro      | Aljezur              | Aljezur              | House               | ... |
+| GFFPPA         |    265,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    370,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFLSGdLA      |    235,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 2FFL(FA        |    198,000 | Faro      | Lagoa (Algarve)      | Ferragudo            | Apartment           | ... |
+| GFFOOW         |    495,000 | Faro      | Olhão                | Olhão                | Warehouse           | ... |
+| NFFSBdNL       |    286,000 | Faro      | Faro                 | Santa Bárbara de ... | Land                | ... |
+| BLFFF(eSPS     |    355,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Store               | ... |
+| 1FFOMeFA       |    224,000 | Faro      | Olhão                | Moncarapacho e Fu... | Apartment           | ... |
+| 1FFPPA         |    285,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFPPH          |    675,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| GFFLSGdLA      |    299,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 2FFL(EePA      |    198,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | Apartment           | ... |
+| 4FFPPA         |    282,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    352,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    287,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    292,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 7FFPPA         |    297,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPA         |    262,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPA         |    332,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    267,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFPPA         |    337,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    277,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    347,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    282,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    287,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFCMAA        |    110,000 | Faro      | Castro Marim         | Azinhal              | Apartment           | ... |
+| NFVdBVdBeRL    |     55,000 | Faro      | Vila do Bispo        | Vila do Bispo e R... | Land                | ... |
+| 3FFPPA         |    277,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    342,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    272,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFLBeBdSJL     |     40,000 | Faro      | Lagos                | Bensafrim e Barão... | Land                | ... |
+| 3FFVRdSAMGA    |    278,500 | Faro      | Vila Real de Sant... | Monte Gordo          | Apartment           | ... |
+| NFVdBSH        |    349,000 | Faro      | Vila do Bispo        | Sagres               | House               | ... |
+| 1FFTT(MeSA     |    180,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| 1FFAAeOdÁA     |      2,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      2,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFLQA         |    330,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 1FFAAeOdÁA     |      4,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFAAeOdÁA     |      3,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 6FFPPA         |    130,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFAAeOdÁA     |      5,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFPPA         |    253,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFLQL         |    975,000 | Faro      | Loulé                | Quarteira            | Land                | ... |
+| NFVdBSL        |  1,200,000 | Faro      | Vila do Bispo        | Sagres               | Land                | ... |
+| GFFPPA         |    262,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFPPTol       |     65,000 | Faro      | Portimão             | Portimão             | Transfer of lease   | ... |
+| NFLBL          |    550,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| 1FFPPA         |    267,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 1FFAAeOdÁA     |      6,500 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFPPA         |    370,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFLQA         |      8,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFMMB          |    190,000 | Faro      | Monchique            | Monchique            | Building            | ... |
+| NFAAeOdÁH      |  1,300,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| 2FFVRdSAMGA    |    245,000 | Faro      | Vila Real de Sant... | Monte Gordo          | Apartment           | ... |
+| NFFCeEL        |     30,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| NFVdBSH        |  1,250,000 | Faro      | Vila do Bispo        | Sagres               | Hotel               | ... |
+| NFPPH          |  1,100,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| 1FFL(PA        |    272,000 | Faro      | Lagoa (Algarve)      | Porches              | Apartment           | ... |
+| 4FFLSGdLA      |    287,000 | Faro      | Lagos                | São Gonçalo de Lagos | Apartment           | ... |
+| 1FFPPA         |    450,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFAAeOdÁA     |    260,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFL(PA        |    170,000 | Faro      | Lagoa (Algarve)      | Porches              | Apartment           | ... |
+| NFFF(eSPH      |  1,150,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| NFTT(MeSH      |     79,900 | Faro      | Tavira               | Tavira (Santa Mar... | House               | ... |
+| NFTLdTeSEH     |    170,000 | Faro      | Tavira               | Luz de Tavira e S... | House               | ... |
+| NFAAL          |     95,000 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| 1FFPPA         |    190,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFTT(MeSA     |    275,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| GFFL(FA        |    220,000 | Faro      | Lagoa (Algarve)      | Ferragudo            | Apartment           | ... |
+| 9FFAAeOdÁA     |    323,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLQS          |  1,500,000 | Faro      | Loulé                | Quarteira            | Store               | ... |
+| NFLBeBdSJH     |    498,000 | Faro      | Lagos                | Bensafrim e Barão... | House               | ... |
+| GFFVRdSAVNdCS  |    119,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | Store               | ... |
+| NFOMeFH        |    350,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| 8FFFF(eSPA     |    345,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 1FFTT(MeSA     |    240,000 | Faro      | Tavira               | Tavira (Santa Mar... | Apartment           | ... |
+| NFCMCML        |     95,000 | Faro      | Castro Marim         | Castro Marim         | Land                | ... |
+| NFL(FH         |  1,299,000 | Faro      | Lagoa (Algarve)      | Ferragudo            | House               | ... |
+| 3FFFMA         |    305,000 | Faro      | Faro                 | Montenegro           | Apartment           | ... |
+| NFMMH          |    310,000 | Faro      | Monchique            | Marmelete            | House               | ... |
+| NFVdBVdBeRL    |     50,000 | Faro      | Vila do Bispo        | Vila do Bispo e R... | Land                | ... |
+| GFFTCeCdTH     |    750,000 | Faro      | Tavira               | Conceição e Caban... | House               | ... |
+| 1FFCMCMO       |    183,000 | Faro      | Castro Marim         | Castro Marim         | Office              | ... |
+| 2FFVRdSAVRdSAA |    290,000 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| NFCMCMO-R      |     45,000 | Faro      | Castro Marim         | Castro Marim         | Other - Residential | ... |
+| NFCMOO-R       |     40,000 | Faro      | Castro Marim         | Odeleite             | Other - Residential | ... |
+| NFOMeFH        |    240,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| NFLQL          |    250,000 | Faro      | Loulé                | Quarteira            | Land                | ... |
+| GFFFF(eSPA     |    370,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFSAeTH       |    249,900 | Faro      | Silves               | Algoz e Tunes        | House               | ... |
+| NFSSMdSF       |    150,000 | Faro      | Silves               | São Marcos da Serra  | Farm                | ... |
+| NFL(LeCF       |  1,150,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Farm                | ... |
+| NFFF(eSPH      |    780,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| GFFAAeOdÁA     |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLAH          |     98,000 | Faro      | Loulé                | Alte                 | House               | ... |
+| GFFLQA         |    545,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| NFSAePH        |    330,000 | Faro      | Silves               | Alcantarilha e Pêra  | House               | ... |
+| NFAAeOdÁH      |  1,950,000 | Faro      | Albufeira            | Albufeira e Olhos... | House               | ... |
+| NFFF(eSPH      |    317,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| 5FFPPA         |    178,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFAGO-R       |      2,250 | Faro      | Albufeira            | Guia                 | Other - Residential | ... |
+| NFLQO-R        |     11,500 | Faro      | Loulé                | Quarteira            | Other - Residential | ... |
+| GFFPPS         |     90,000 | Faro      | Portimão             | Portimão             | Store               | ... |
+| NFAAL          |     19,500 | Faro      | Aljezur              | Aljezur              | Land                | ... |
+| 1FFPPA         |    540,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 2FFPPA         |    560,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFPPA         |    580,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 4FFPPA         |    600,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFPPA         |    620,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFPPA         |    640,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 7FFPPA         |    670,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFLQH         |    850,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| GFFAAeOdÁA     |    330,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFL(LeCA      |    229,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| 3FFLQA         |     14,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| 6FFFF(eSPA     |    268,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| NFAOH          |    380,000 | Faro      | Aljezur              | Odeceixe             | House               | ... |
+| GFFPPA         |    520,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| GFFVRdSAVRdSAA |    150,000 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| GFFVRdSAVRdSAA |    161,000 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| NFSSL          |    880,000 | Faro      | Silves               | Silves               | Land                | ... |
+| 1FFLQA         |    485,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| GFFPPO         |     99,000 | Faro      | Portimão             | Portimão             | Office              | ... |
+| NFLBeBdSJL     |    300,000 | Faro      | Lagos                | Bensafrim e Barão... | Land                | ... |
+| GFFOOS         |    129,610 | Faro      | Olhão                | Olhão                | Store               | ... |
+| NFCMAH         |    430,000 | Faro      | Castro Marim         | Altura               | House               | ... |
+| 2FFAGA         |    220,000 | Faro      | Albufeira            | Guia                 | Apartment           | ... |
+| NFABL          |    375,000 | Faro      | Aljezur              | Bordeira             | Land                | ... |
+| NFVRdSAVNdCL   |     85,000 | Faro      | Vila Real de Sant... | Vila Nova de Cacela  | Land                | ... |
+| 2FFAAeOdÁA     |    825,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 1FFFF(eSPA     |    279,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 7FFFF(eSPA     |    242,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| GFFL(EePH      |    335,000 | Faro      | Lagoa (Algarve)      | Estômbar e Parchal   | House               | ... |
+| NFFCeEL        |    190,000 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| 4FFLQA         |    359,000 | Faro      | Loulé                | Quarteira            | Apartment           | ... |
+| GFFOMeFH       |    990,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| NFCMCMH        |    320,000 | Faro      | Castro Marim         | Castro Marim         | House               | ... |
+| GFFAAeOdÁA     |    270,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFSSBdMH       |    289,900 | Faro      | Silves               | São Bartolomeu de... | House               | ... |
+| 2FFPPA         |    297,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| NFLQH          |  2,950,000 | Faro      | Loulé                | Quarteira            | House               | ... |
+| NFL(LeCH       |    310,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| 2FFVRdSAVRdSAA |    249,500 | Faro      | Vila Real de Sant... | Vila Real de Sant... | Apartment           | ... |
+| 3FFSAdPA       |    470,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 3FFSAdPA       |    470,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 3FFSAdPA       |    450,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 4FFSAdPA       |    520,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 4FFSAdPA       |    560,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 4FFSAdPA       |    560,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 9FFPPA         |    205,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 5FFSAdPA       |    850,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 5FFSAdPA       |    850,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 3FFPPA         |    189,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFFF(eSPA     |    300,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Apartment           | ... |
+| 3FFL(LeCA      |    185,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | Apartment           | ... |
+| 1FFAAeOdÁA     |      6,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| 2FFSAdPA       |    420,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 2FFSAdPA       |    440,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFAAeOdÁA     |     22,800 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| GFFAAeOdÁA     |      8,800 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFSAeTL        |     37,000 | Faro      | Silves               | Algoz e Tunes        | Land                | ... |
+| NFSBdASBdAH    |    390,000 | Faro      | São Brás de Alportel | São Brás de Alportel | House               | ... |
+| NFCMOH         |     70,000 | Faro      | Castro Marim         | Odeleite             | House               | ... |
+| NFLAO-C        |  3,900,000 | Faro      | Loulé                | Almancil             | Other - Commercial  | ... |
+| GFFPPA         |    258,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 6FFSAdPA       |    185,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| NFFMH          |    799,000 | Faro      | Faro                 | Montenegro           | House               | ... |
+| GFFSAdPA       |    370,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFSAdPA       |    410,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFSAdPA       |    410,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 1FFSAdPA       |    390,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| 2FFSAdPA       |    440,000 | Faro      | Silves               | Armação de Pêra      | Apartment           | ... |
+| NFFCeEF        |  3,300,000 | Faro      | Faro                 | Conceição e Estoi    | Farm                | ... |
+| GFFPPH         |    355,000 | Faro      | Portimão             | Portimão             | House               | ... |
+| NFFF(eSPL      |    230,000 | Faro      | Faro                 | Faro (Sé e São Pe... | Land                | ... |
+| GFFOMeFH       |    970,000 | Faro      | Olhão                | Moncarapacho e Fu... | House               | ... |
+| NFLBL          |     80,000 | Faro      | Loulé                | Boliqueime           | Land                | ... |
+| GFFPPA         |    187,500 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+| 3FFSAeTA       |    199,000 | Faro      | Silves               | Algoz e Tunes        | Apartment           | ... |
+| NFCMOH         |    110,000 | Faro      | Castro Marim         | Odeleite             | House               | ... |
+| NFFF(eSPH      |    380,000 | Faro      | Faro                 | Faro (Sé e São Pe... | House               | ... |
+| NFSBdASBdAF    |  1,100,000 | Faro      | São Brás de Alportel | São Brás de Alportel | Farm                | ... |
+| NFFCeEL        |     49,500 | Faro      | Faro                 | Conceição e Estoi    | Land                | ... |
+| 2FFAAeOdÁA     |    295,000 | Faro      | Albufeira            | Albufeira e Olhos... | Apartment           | ... |
+| NFLSSH         |    650,000 | Faro      | Loulé                | São Sebastião        | House               | ... |
+| 1FFVRdSAMGA    |    299,000 | Faro      | Vila Real de Sant... | Monte Gordo          | Apartment           | ... |
+| 2FFSAePA       |    232,000 | Faro      | Silves               | Alcantarilha e Pêra  | Apartment           | ... |
+| NFL(LeCH       |  2,300,000 | Faro      | Lagoa (Algarve)      | Lagoa e Carvoeiro    | House               | ... |
+| NFAOH          |    375,525 | Faro      | Aljezur              | Odeceixe             | House               | ... |
+| 4FFAAeOdÁO-R   |     11,500 | Faro      | Albufeira            | Albufeira e Olhos... | Other - Residential | ... |
+| 6FFPPA         |    200,000 | Faro      | Portimão             | Portimão             | Apartment           | ... |
+
+[0m15:41:21.419103 [debug] [MainThread]: Resource report: {"command_name": "show", "command_success": true, "command_wall_clock_time": 5.5440607, "process_user_time": 18.537783, "process_kernel_time": 4.175674, "process_mem_max_rss": "995148", "process_in_blocks": "349128", "process_out_blocks": "6336"}
+[0m15:41:21.420716 [debug] [MainThread]: Command `cli show` succeeded at 15:41:21.420368 after 5.56 seconds
+[0m15:41:21.421679 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3ff94283d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3fdf553700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f404104b8e0>]}
+[0m15:41:21.422631 [debug] [MainThread]: Flushing usage events

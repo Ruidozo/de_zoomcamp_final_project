@@ -2,6 +2,7 @@ from mage_ai.data_cleaner.transformer_actions.base import BaseAction
 from mage_ai.data_cleaner.transformer_actions.constants import ActionType, Axis
 from mage_ai.data_cleaner.transformer_actions.utils import build_transformer_action
 from pandas import DataFrame
+from datetime import datetime
 
 if 'transformer' not in globals():
     from mage_ai.data_preparation.decorators import transformer
@@ -50,6 +51,10 @@ def execute_transformer_action(df: DataFrame, *args, **kwargs) -> DataFrame:
     # Step 4: Move 'unique_id' to the first column
     columns = ['unique_id'] + [col for col in df.columns if col != 'unique_id']
     df = df[columns]
+
+    # Steop 4: Add a push data column
+    df['push_date'] = datetime.utcnow().date()  # Add today's UTC date
+
 
     # Step 5: Return the cleaned DataFrame
     return df

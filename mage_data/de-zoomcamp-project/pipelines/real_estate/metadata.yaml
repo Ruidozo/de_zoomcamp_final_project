@@ -13,12 +13,12 @@ blocks:
   language: python
   name: kaggle_loader
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: data_loader
   upstream_blocks: []
   uuid: kaggle_loader
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -29,13 +29,13 @@ blocks:
   language: python
   name: cleans dataframe
   retry_config: null
-  status: failed
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - kaggle_loader
   uuid: cleans_dataframe
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -52,7 +52,7 @@ blocks:
   upstream_blocks:
   - cleans_dataframe
   uuid: remove_null_price
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -70,7 +70,7 @@ blocks:
   upstream_blocks:
   - remove_null_price
   uuid: drops_duplicate_rows
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration:
     file_path: data_exporters/data_exporter_weely_postgres.py
@@ -106,7 +106,7 @@ blocks:
   type: data_loader
   upstream_blocks: []
   uuid: loads_real_estate_table
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -124,7 +124,7 @@ blocks:
   - drops_duplicate_rows
   - loads_real_estate_table
   uuid: tablecomparison
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks:
@@ -178,7 +178,7 @@ blocks:
   upstream_blocks:
   - data_evaluator
   uuid: data_exporter_stats
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: pink
   configuration:
     file_path: custom/webhook_slack.py
@@ -200,7 +200,22 @@ blocks:
 cache_block_output_in_memory: false
 callbacks: []
 concurrency_config: {}
-conditionals: []
+conditionals:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: golden ronin
+  retry_config: null
+  status: updated
+  timeout: null
+  type: conditional
+  upstream_blocks: []
+  uuid: golden_ronin
 created_at: '2025-01-16 07:53:09.712262+00:00'
 data_integration: null
 description: null
