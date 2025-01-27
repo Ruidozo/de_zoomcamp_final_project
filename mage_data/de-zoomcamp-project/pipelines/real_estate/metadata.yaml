@@ -128,7 +128,6 @@ blocks:
   color: null
   configuration: {}
   downstream_blocks:
-  - dbt/models/staging/stg_staging__real_estate_data
   - webhook_slack
   executor_config: null
   executor_type: local_python
@@ -180,71 +179,6 @@ blocks:
   - data_evaluator
   uuid: data_exporter_stats
 - all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    dbt_project_name: dbt
-    file_path: dbt/models/core/real_estate_data_w_geolocation.sql
-    file_source:
-      path: dbt/models/core/real_estate_data_w_geolocation.sql
-      project_path: dbt
-  downstream_blocks: []
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: sql
-  name: real_estate_data_w_geolocation
-  retry_config: null
-  status: executed
-  timeout: null
-  type: dbt
-  upstream_blocks:
-  - dbt/models/staging/stg_cleaned_real_estate_data
-  uuid: dbt/models/core/real_estate_data_w_geolocation
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    dbt_project_name: dbt
-    file_path: dbt/models/staging/stg_staging__real_estate_data.sql
-    file_source:
-      path: dbt/models/staging/stg_staging__real_estate_data.sql
-      project_path: dbt
-  downstream_blocks:
-  - dbt/models/staging/stg_cleaned_real_estate_data
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: sql
-  name: dbt/models/staging/stg_staging__real_estate_data
-  retry_config: null
-  status: executed
-  timeout: null
-  type: dbt
-  upstream_blocks:
-  - export_real_estate_data
-  uuid: dbt/models/staging/stg_staging__real_estate_data
-- all_upstream_blocks_executed: true
-  color: null
-  configuration:
-    dbt_project_name: dbt
-    file_path: dbt/models/staging/stg_cleaned_real_estate_data.sql
-    file_source:
-      path: dbt/models/staging/stg_cleaned_real_estate_data.sql
-      project_path: dbt
-  downstream_blocks:
-  - dbt/models/core/real_estate_data_w_geolocation
-  executor_config: null
-  executor_type: local_python
-  has_callback: false
-  language: sql
-  name: dbt/models/staging/stg_cleaned_real_estate_data
-  retry_config: null
-  status: executed
-  timeout: null
-  type: dbt
-  upstream_blocks:
-  - dbt/models/staging/stg_staging__real_estate_data
-  uuid: dbt/models/staging/stg_cleaned_real_estate_data
-- all_upstream_blocks_executed: true
   color: pink
   configuration:
     file_path: custom/webhook_slack.py
@@ -257,7 +191,7 @@ blocks:
   language: python
   name: webhook slack
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: custom
   upstream_blocks:
@@ -280,10 +214,7 @@ conditionals:
   status: updated
   timeout: null
   type: conditional
-  upstream_blocks:
-  - dbt/models/core/real_estate_data_w_geolocation
-  - dbt/models/staging/stg_cleaned_real_estate_data
-  - dbt/models/staging/stg_staging__real_estate_data
+  upstream_blocks: []
   uuid: golden_ronin
 created_at: '2025-01-16 07:53:09.712262+00:00'
 data_integration: null

@@ -16,7 +16,7 @@ services:
       resources:
         limits:
           memory: 1G
-          cpus: "1"
+          cpus: "1.0"
 
   mageai:
     build:
@@ -28,7 +28,6 @@ services:
       - ./mage_data:/home/src
       - ./secrets:/home/src/secrets
       - ./.env:/home/src/.env
-      - ./dbt_zoomcamp:/home/src/de-zoomcamp-project/dbt
     env_file:
       - .env
     environment:

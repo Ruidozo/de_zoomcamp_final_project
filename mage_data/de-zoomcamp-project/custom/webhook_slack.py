@@ -12,9 +12,9 @@ from mage_ai.data_preparation.variable_manager import VariableManager
 load_dotenv()
 
 
-def notify_slack(pipeline_name, status, db_data=None, dbt_status=None):
+def notify_slack(pipeline_name, status, db_data=None):
     """
-    Sends a notification to Slack with the pipeline status and DBT execution information.
+    Sends a notification to Slack with the pipeline status and number of rows exported.
     """
     # Access the webhook URL from environment variables
     webhook_url = os.getenv('SLACK_WEBHOOK_URL')
@@ -26,14 +26,12 @@ def notify_slack(pipeline_name, status, db_data=None, dbt_status=None):
     if db_data and isinstance(db_data, int):
         message_text = (
             f"Pipeline `{pipeline_name}` has completed with status: {status}.\n"
-            f"Number of rows exported to the database: {db_data}\n"
-            f"DBT execution status: {'Executed' if dbt_status else 'Skipped'}."
+            f"Number of rows exported to the database: {db_data}."
         )
     else:
         message_text = (
             f"Pipeline `{pipeline_name}` has completed with status: {status}.\n"
-            f"No data was exported.\n"
-            f"DBT execution status: {'Executed' if dbt_status else 'Skipped'}."
+            f"No data was exported."
         )
 
     message = {"text": message_text}
@@ -49,7 +47,7 @@ def notify_slack(pipeline_name, status, db_data=None, dbt_status=None):
 @custom
 def transform_custom(*args, **kwargs):
     """
-    Sends a Slack notification with the number of rows exported and DBT status.
+    Sends a Slack notification with the number of rows exported.
     """
     # Retrieve the DataFrame from the upstream block, if available
     df_data = args[0] if args else None
@@ -60,20 +58,11 @@ def transform_custom(*args, **kwargs):
     # Debug: Print the row count
     print(f"Number of rows exported: {num_rows_exported}")
 
-    # Check the global variable `has_new_rows` to determine if DBT was run
-    variable_manager = VariableManager(get_repo_path())
-    try:
-        has_new_rows = variable_manager.get_variable('default', 'has_new_rows', 'has_new_rows')
-    except Exception as e:
-        print(f"Error fetching 'has_new_rows': {e}")
-        has_new_rows = False
-
     # Notify Slack
     notify_slack(
         pipeline_name="data_real_estate",
         status="Success",
-        db_data=num_rows_exported,
-        dbt_status=has_new_rows
+        db_data=num_rows_exported
     )
 
     return num_rows_exported

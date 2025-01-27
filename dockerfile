@@ -7,7 +7,5 @@ RUN pip install --default-timeout=100 geopandas \
     && pip install --default-timeout=100 pyproj \
     && pip install --default-timeout=100 rtree \
     && pip install --default-timeout=100 kagglehub \
-    && pip install --default-timeout=100 dbt-core \
-    && pip install --default-timeout=100 dbt-postgres
 
 CMD ["mage", "start", "de-zoomcamp-project"]
